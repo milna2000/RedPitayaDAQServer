@@ -1,0 +1,165 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.06632",
+   "Default View_TopLeft":"837,1452",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port port-id_ext_DIO2_N -pg 1 -lvl 9 -x 2560 -y 1340 -defaultsOSRD
+preplace port port-id_ext_DIO3_N -pg 1 -lvl 9 -x 2560 -y 1060 -defaultsOSRD
+preplace port port-id_ext_DIO4_N -pg 1 -lvl 9 -x 2560 -y 820 -defaultsOSRD
+preplace port port-id_ext_DIO5_N -pg 1 -lvl 9 -x 2560 -y 680 -defaultsOSRD
+preplace port port-id_ext_DIO6_N -pg 1 -lvl 9 -x 2560 -y 960 -defaultsOSRD
+preplace port port-id_ext_DIO6_P -pg 1 -lvl 9 -x 2560 -y 1380 -defaultsOSRD
+preplace port port-id_ext_DIO7_N -pg 1 -lvl 9 -x 2560 -y 1620 -defaultsOSRD
+preplace port port-id_ext_DIO7_P -pg 1 -lvl 9 -x 2560 -y 1760 -defaultsOSRD
+preplace portBus cfg_dac -pg 1 -lvl 0 -x 0 -y 1050 -defaultsOSRD
+preplace portBus cfg_in -pg 1 -lvl 0 -x 0 -y 1130 -defaultsOSRD
+preplace portBus dio_data_clocked -pg 1 -lvl 9 -x 2560 -y 1200 -defaultsOSRD
+preplace portBus enable_dac -pg 1 -lvl 0 -x 0 -y 1240 -defaultsOSRD
+preplace portBus resync -pg 1 -lvl 0 -x 0 -y 1110 -defaultsOSRD
+preplace inst hbridgewaveform_0 -pg 1 -lvl 5 -x 1430 -y 1570 -defaultsOSRD
+preplace inst hbridgewaveform_1 -pg 1 -lvl 5 -x 1430 -y 770 -defaultsOSRD
+preplace inst rp_iobuf_2 -pg 1 -lvl 7 -x 2110 -y 1390 -defaultsOSRD
+preplace inst rp_iobuf_3 -pg 1 -lvl 7 -x 2110 -y 970 -defaultsOSRD
+preplace inst rp_iobuf_4 -pg 1 -lvl 7 -x 2110 -y 690 -defaultsOSRD
+preplace inst rp_iobuf_5 -pg 1 -lvl 7 -x 2110 -y 830 -defaultsOSRD
+preplace inst rp_iobuf_6 -pg 1 -lvl 7 -x 2110 -y 1110 -defaultsOSRD
+preplace inst rp_iobuf_7 -pg 1 -lvl 7 -x 2110 -y 1250 -defaultsOSRD
+preplace inst rp_iobuf_8 -pg 1 -lvl 7 -x 2110 -y 1770 -defaultsOSRD
+preplace inst rp_iobuf_9 -pg 1 -lvl 7 -x 2110 -y 1630 -defaultsOSRD
+preplace inst sequence_stepper_0 -pg 1 -lvl 4 -x 1040 -y 320 -defaultsOSRD
+preplace inst util_reduced_logic_0 -pg 1 -lvl 2 -x 380 -y 490 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 6 -x 1760 -y 240 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 6 -x 1760 -y 480 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 6 -x 1760 -y 1770 -defaultsOSRD
+preplace inst util_vector_logic_3 -pg 1 -lvl 6 -x 1760 -y 1890 -defaultsOSRD
+preplace inst util_vector_logic_4 -pg 1 -lvl 6 -x 1760 -y 1240 -defaultsOSRD
+preplace inst util_vector_logic_5 -pg 1 -lvl 6 -x 1760 -y 720 -defaultsOSRD
+preplace inst util_vector_logic_6 -pg 1 -lvl 6 -x 1760 -y 600 -defaultsOSRD
+preplace inst util_vector_logic_7 -pg 1 -lvl 3 -x 680 -y 440 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 8 -x 2430 -y 1200 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 7 -x 2110 -y 1510 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 5 -x 1430 -y 1760 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 6 -x 1760 -y 1450 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 6 -x 1760 -y 1030 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 6 -x 1760 -y 830 -defaultsOSRD
+preplace inst xlslice_4 -pg 1 -lvl 4 -x 1040 -y 440 -defaultsOSRD
+preplace inst xlslice_5 -pg 1 -lvl 5 -x 1430 -y 1330 -defaultsOSRD
+preplace inst xlslice_6 -pg 1 -lvl 5 -x 1430 -y 950 -defaultsOSRD
+preplace inst xlslice_7 -pg 1 -lvl 6 -x 1760 -y 1660 -defaultsOSRD
+preplace inst xlslice_8 -pg 1 -lvl 6 -x 1760 -y 1560 -defaultsOSRD
+preplace inst xlslice_9 -pg 1 -lvl 5 -x 1430 -y 1880 -defaultsOSRD
+preplace inst xlslice_10 -pg 1 -lvl 5 -x 1430 -y 1230 -defaultsOSRD
+preplace inst xlslice_11 -pg 1 -lvl 5 -x 1430 -y 1050 -defaultsOSRD
+preplace inst xlslice_12 -pg 1 -lvl 6 -x 1760 -y 370 -defaultsOSRD
+preplace inst xlslice_13 -pg 1 -lvl 6 -x 1760 -y 930 -defaultsOSRD
+preplace inst xlslice_14 -pg 1 -lvl 6 -x 1760 -y 1130 -defaultsOSRD
+preplace inst xlslice_15 -pg 1 -lvl 5 -x 1430 -y 490 -defaultsOSRD
+preplace inst xlslice_16 -pg 1 -lvl 5 -x 1430 -y 250 -defaultsOSRD
+preplace inst xlslice_17 -pg 1 -lvl 6 -x 1760 -y 1350 -defaultsOSRD
+preplace inst xlslice_18 -pg 1 -lvl 4 -x 1040 -y 1290 -defaultsOSRD
+preplace inst xlslice_19 -pg 1 -lvl 4 -x 1040 -y 1590 -defaultsOSRD
+preplace inst xlslice_20 -pg 1 -lvl 4 -x 1040 -y 1690 -defaultsOSRD
+preplace inst xlslice_21 -pg 1 -lvl 4 -x 1040 -y 1790 -defaultsOSRD
+preplace inst xlslice_22 -pg 1 -lvl 4 -x 1040 -y 1890 -defaultsOSRD
+preplace inst xlslice_23 -pg 1 -lvl 3 -x 680 -y 950 -defaultsOSRD
+preplace inst xlslice_24 -pg 1 -lvl 4 -x 1040 -y 1390 -defaultsOSRD
+preplace inst xlslice_25 -pg 1 -lvl 4 -x 1040 -y 1490 -defaultsOSRD
+preplace inst xlslice_26 -pg 1 -lvl 4 -x 1040 -y 870 -defaultsOSRD
+preplace inst xlslice_27 -pg 1 -lvl 4 -x 1040 -y 970 -defaultsOSRD
+preplace inst xlslice_28 -pg 1 -lvl 4 -x 1040 -y 1070 -defaultsOSRD
+preplace inst xlslice_29 -pg 1 -lvl 4 -x 1040 -y 1170 -defaultsOSRD
+preplace inst xlslice_30 -pg 1 -lvl 3 -x 680 -y 1050 -defaultsOSRD
+preplace inst xlslice_31 -pg 1 -lvl 3 -x 680 -y 1170 -defaultsOSRD
+preplace inst xlslice_32 -pg 1 -lvl 4 -x 1040 -y 570 -defaultsOSRD
+preplace inst xlslice_33 -pg 1 -lvl 4 -x 1040 -y 670 -defaultsOSRD
+preplace inst xlslice_34 -pg 1 -lvl 4 -x 1040 -y 770 -defaultsOSRD
+preplace inst xlslice_35 -pg 1 -lvl 5 -x 1430 -y 50 -defaultsOSRD
+preplace inst xlslice_36 -pg 1 -lvl 5 -x 1430 -y 150 -defaultsOSRD
+preplace inst xlslice_37 -pg 1 -lvl 5 -x 1430 -y 590 -defaultsOSRD
+preplace inst xlslice_38 -pg 1 -lvl 1 -x 130 -y 370 -defaultsOSRD
+preplace netloc Net 1 7 2 NJ 1380 NJ
+preplace netloc Net1 1 7 2 NJ 960 NJ
+preplace netloc Net2 1 7 2 NJ 680 NJ
+preplace netloc Net3 1 7 2 NJ 820 NJ
+preplace netloc Net4 1 7 2 2250J 1060 NJ
+preplace netloc Net5 1 7 2 2240J 1340 NJ
+preplace netloc Net6 1 7 2 NJ 1760 NJ
+preplace netloc Net7 1 7 2 NJ 1620 NJ
+preplace netloc aresetn_1 1 0 5 NJ 430 NJ 430 530 510 NJ 510 1240
+preplace netloc c_counter_binary_0_Q 1 4 1 1280 50n
+preplace netloc cfg_dac_1 1 0 3 NJ 1050 NJ 1050 520
+preplace netloc clk_wiz_0_clk_internal 1 0 7 NJ 310 NJ 310 NJ 310 880 500 1270 310 NJ 310 1920
+preplace netloc enable_dac_1 1 0 4 NJ 1240 NJ 1240 NJ 1240 860
+preplace netloc hbridgewaveform_0_H1out 1 5 1 1590 1560n
+preplace netloc hbridgewaveform_0_H2out 1 5 1 1570 1580n
+preplace netloc hbridgewaveform_1_H1out 1 5 1 1580 760n
+preplace netloc hbridgewaveform_1_H2out 1 5 1 1570 730n
+preplace netloc resync_1 1 0 4 NJ 1110 NJ 1110 NJ 1110 840
+preplace netloc rp_iobuf_2_val_in_clocked 1 7 1 2260 1160n
+preplace netloc rp_iobuf_3_val_in_clocked 1 7 1 2300 980n
+preplace netloc rp_iobuf_4_val_in_clocked 1 7 1 2310 700n
+preplace netloc rp_iobuf_5_val_in_clocked 1 7 1 2270 840n
+preplace netloc rp_iobuf_6_val_in_clocked 1 7 1 2250 1120n
+preplace netloc rp_iobuf_7_val_in_clocked 1 7 1 N 1260
+preplace netloc rp_iobuf_8_val_in_clocked 1 7 1 2280 1120n
+preplace netloc rp_iobuf_9_val_in_clocked 1 7 1 2290 1140n
+preplace netloc system_cfg_data1 1 0 5 20 1130 NJ 1130 530 1230 850 1230 1190J
+preplace netloc util_reduced_logic_0_Res 1 2 1 520J 450n
+preplace netloc util_vector_logic_0_Res 1 6 1 1960 240n
+preplace netloc util_vector_logic_1_Res 1 6 1 1940 480n
+preplace netloc util_vector_logic_2_Res 1 6 1 N 1770
+preplace netloc util_vector_logic_3_Res 1 6 1 1950 1630n
+preplace netloc util_vector_logic_4_Res 1 6 1 1910 1240n
+preplace netloc util_vector_logic_5_Res 1 6 1 1930 720n
+preplace netloc util_vector_logic_6_Res 1 6 1 1950 600n
+preplace netloc util_vector_logic_7_Res 1 3 1 830 340n
+preplace netloc xlconcat_0_dout2 1 8 1 NJ 1200
+preplace netloc xlconstant_1_dout 1 7 1 2310 1280n
+preplace netloc xlslice_0_Dout 1 5 1 NJ 1760
+preplace netloc xlslice_10_Dout 1 5 1 NJ 1230
+preplace netloc xlslice_11_Dout 1 5 1 1590J 710n
+preplace netloc xlslice_12_Dout 1 6 1 1970J 370n
+preplace netloc xlslice_13_Dout 1 6 1 1910J 850n
+preplace netloc xlslice_14_Dout 1 6 1 NJ 1130
+preplace netloc xlslice_15_Dout 1 5 1 NJ 490
+preplace netloc xlslice_16_Dout 1 5 1 NJ 250
+preplace netloc xlslice_17_Dout 1 6 1 1950J 1270n
+preplace netloc xlslice_18_Dout 1 4 1 1210J 1290n
+preplace netloc xlslice_19_Dout 1 4 1 NJ 1590
+preplace netloc xlslice_1_Dout 1 6 1 1960J 1410n
+preplace netloc xlslice_20_Dout 1 4 1 1240J 1610n
+preplace netloc xlslice_21_Dout 1 4 1 1260J 1630n
+preplace netloc xlslice_22_Dout 1 4 1 1280J 1650n
+preplace netloc xlslice_23_Dout 1 3 1 870 670n
+preplace netloc xlslice_24_Dout 1 4 1 1200J 1390n
+preplace netloc xlslice_25_Dout 1 4 1 1190J 1490n
+preplace netloc xlslice_26_Dout 1 4 1 1190J 790n
+preplace netloc xlslice_27_Dout 1 4 1 1200J 810n
+preplace netloc xlslice_28_Dout 1 4 1 1210J 830n
+preplace netloc xlslice_29_Dout 1 4 1 1230J 850n
+preplace netloc xlslice_2_Dout 1 6 1 1910J 990n
+preplace netloc xlslice_30_Dout 1 3 1 880 870n
+preplace netloc xlslice_31_Dout 1 3 1 830 1170n
+preplace netloc xlslice_32_Dout 1 4 1 1260J 570n
+preplace netloc xlslice_33_Dout 1 4 1 1250J 670n
+preplace netloc xlslice_34_Dout 1 4 1 NJ 770
+preplace netloc xlslice_35_Dout 1 5 1 1590 50n
+preplace netloc xlslice_36_Dout 1 5 1 1560 150n
+preplace netloc xlslice_37_Dout 1 5 1 NJ 590
+preplace netloc xlslice_38_Dout 1 1 3 240 300 NJ 300 NJ
+preplace netloc xlslice_3_Dout 1 6 1 1910J 710n
+preplace netloc xlslice_4_Dout 1 4 2 1220 370 NJ
+preplace netloc xlslice_5_Dout 1 5 1 1600 830n
+preplace netloc xlslice_6_Dout 1 5 1 1560J 610n
+preplace netloc xlslice_7_Dout 1 6 1 1910J 1660n
+preplace netloc xlslice_8_Dout 1 6 1 1910J 1560n
+preplace netloc xlslice_9_Dout 1 5 1 NJ 1880
+levelinfo -pg 1 0 130 380 680 1040 1430 1760 2110 2430 2560
+pagesize -pg 1 -db -bbox -sgen -160 -10 2760 1960
+"
+}
+

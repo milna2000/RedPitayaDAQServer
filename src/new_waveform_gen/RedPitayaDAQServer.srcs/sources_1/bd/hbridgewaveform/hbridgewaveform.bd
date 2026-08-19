@@ -1,0 +1,649 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA50E4BA33A036086",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../RedPitayaDAQServer.gen/sources_1/bd/hbridgewaveform",
+      "name": "hbridgewaveform",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "axis_variable_A_channel_1": "",
+      "dds_compiler_A_channel_1": "",
+      "hbridge_signalgen_0_upgraded_ipi": "",
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "util_vector_logic_2": "",
+      "util_vector_logic_3": "",
+      "util_vector_logic_4": "",
+      "util_vector_logic_5": "",
+      "xlconcat_A_channel_1": "",
+      "xlslice_0": ""
+    },
+    "ports": {
+      "H1out": {
+        "type": "data",
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "H2out": {
+        "type": "data",
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "aresetn",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "hbridgewaveform_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "aresetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "enable_All": {
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "enable_H1": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "enable_H2": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "freq": {
+        "direction": "I",
+        "left": "47",
+        "right": "0"
+      },
+      "phase": {
+        "direction": "I",
+        "left": "47",
+        "right": "0"
+      },
+      "pulswidth": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "resync": {
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      }
+    },
+    "components": {
+      "axis_variable_A_channel_1": {
+        "vlnv": "pavel-demin:user:axis_variable:1.0",
+        "xci_name": "hbridgewaveform_axis_variable_A_channel_1_0",
+        "xci_path": "ip/hbridgewaveform_axis_variable_A_channel_1_0/hbridgewaveform_axis_variable_A_channel_1_0.xci",
+        "inst_hier_path": "axis_variable_A_channel_1",
+        "parameters": {
+          "AXIS_TDATA_WIDTH": {
+            "value": "96"
+          }
+        }
+      },
+      "dds_compiler_A_channel_1": {
+        "vlnv": "xilinx.com:ip:dds_compiler:6.0",
+        "xci_name": "hbridgewaveform_dds_compiler_A_channel_1_0",
+        "xci_path": "ip/hbridgewaveform_dds_compiler_A_channel_1_0/hbridgewaveform_dds_compiler_A_channel_1_0.xci",
+        "inst_hier_path": "dds_compiler_A_channel_1",
+        "parameters": {
+          "Amplitude_Mode": {
+            "value": "Full_Range"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "DDS_Clock_Rate": {
+            "value": "125"
+          },
+          "Frequency_Resolution": {
+            "value": "0.4"
+          },
+          "Has_ACLKEN": {
+            "value": "false"
+          },
+          "Has_ARESETn": {
+            "value": "true"
+          },
+          "Has_Phase_Out": {
+            "value": "true"
+          },
+          "Has_TREADY": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "2"
+          },
+          "Latency_Configuration": {
+            "value": "Auto"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "M_PHASE_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Noise_Shaping": {
+            "value": "None"
+          },
+          "Output_Frequency1": {
+            "value": "0"
+          },
+          "Output_Selection": {
+            "value": "Sine_and_Cosine"
+          },
+          "Output_Width": {
+            "value": "3"
+          },
+          "PINC1": {
+            "value": "0"
+          },
+          "POFF1": {
+            "value": "0"
+          },
+          "Parameter_Entry": {
+            "value": "Hardware_Parameters"
+          },
+          "PartsPresent": {
+            "value": "Phase_Generator_only"
+          },
+          "Phase_Increment": {
+            "value": "Programmable"
+          },
+          "Phase_Offset_Angles1": {
+            "value": "0"
+          },
+          "Phase_Width": {
+            "value": "48"
+          },
+          "Phase_offset": {
+            "value": "Programmable"
+          },
+          "Resync": {
+            "value": "false"
+          },
+          "S_PHASE_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Spurious_Free_Dynamic_Range": {
+            "value": "45"
+          }
+        }
+      },
+      "hbridge_signalgen_0_upgraded_ipi": {
+        "vlnv": "xilinx.com:module_ref:hbridge_signalgen:1.0",
+        "xci_name": "hbridgewaveform_hbridge_signalgen_0_upgraded_ipi_0",
+        "xci_path": "ip/hbridgewaveform_hbridge_signalgen_0_upgraded_ipi_0/hbridgewaveform_hbridge_signalgen_0_upgraded_ipi_0.xci",
+        "inst_hier_path": "hbridge_signalgen_0_upgraded_ipi",
+        "parameters": {
+          "AXIS_TDATA_PHASE_WIDTH": {
+            "value": "48"
+          },
+          "CFG_DATA_WIDTH": {
+            "value": "14"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "hbridge_signalgen",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "s_axis_phase": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "6",
+                "value_src": "auto"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "hbridgewaveform_aclk",
+                "value_src": "default_prop"
+              },
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chan} size {attribs {resolve_type generated dependency chan_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency chan_stride format long minimum {} maximum {}} value 48} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_phase_out {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_out} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency phase_fractwidth format long minimum {} maximum {}} value 48} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}}}}} TDATA_WIDTH 48 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_chanid {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chanid} enabled {attribs {resolve_type generated dependency chanid_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency chanid_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_user {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value user} enabled {attribs {resolve_type generated dependency user_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency user_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency user_offset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+                "value_src": "ip_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_tdata_phase",
+                "direction": "I",
+                "left": "47",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_tvalid_phase",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "cfg_data": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "s_axis_phase",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "hbridgewaveform_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "H1": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "H2": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "hbridgewaveform_util_vector_logic_0_0",
+        "xci_path": "ip/hbridgewaveform_util_vector_logic_0_0/hbridgewaveform_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "hbridgewaveform_util_vector_logic_1_0",
+        "xci_path": "ip/hbridgewaveform_util_vector_logic_1_0/hbridgewaveform_util_vector_logic_1_0.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_2": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "hbridgewaveform_util_vector_logic_2_0",
+        "xci_path": "ip/hbridgewaveform_util_vector_logic_2_0/hbridgewaveform_util_vector_logic_2_0.xci",
+        "inst_hier_path": "util_vector_logic_2",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_3": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "hbridgewaveform_util_vector_logic_3_0",
+        "xci_path": "ip/hbridgewaveform_util_vector_logic_3_0/hbridgewaveform_util_vector_logic_3_0.xci",
+        "inst_hier_path": "util_vector_logic_3",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_4": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "hbridgewaveform_util_vector_logic_4_0",
+        "xci_path": "ip/hbridgewaveform_util_vector_logic_4_0/hbridgewaveform_util_vector_logic_4_0.xci",
+        "inst_hier_path": "util_vector_logic_4",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_5": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "hbridgewaveform_util_vector_logic_5_0",
+        "xci_path": "ip/hbridgewaveform_util_vector_logic_5_0/hbridgewaveform_util_vector_logic_5_0.xci",
+        "inst_hier_path": "util_vector_logic_5",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "xlconcat_A_channel_1": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "hbridgewaveform_xlconcat_A_channel_1_0",
+        "xci_path": "ip/hbridgewaveform_xlconcat_A_channel_1_0/hbridgewaveform_xlconcat_A_channel_1_0.xci",
+        "inst_hier_path": "xlconcat_A_channel_1",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "48"
+          },
+          "IN1_WIDTH": {
+            "value": "48"
+          },
+          "IN2_WIDTH": {
+            "value": "8"
+          },
+          "NUM_PORTS": {
+            "value": "2"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "hbridgewaveform_xlslice_0_0",
+        "xci_path": "ip/hbridgewaveform_xlslice_0_0/hbridgewaveform_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "13"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "14"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "axis_variable_A_channel_1_M_AXIS": {
+        "interface_ports": [
+          "axis_variable_A_channel_1/M_AXIS",
+          "dds_compiler_A_channel_1/S_AXIS_CONFIG"
+        ]
+      },
+      "dds_compiler_A_channel_1_M_AXIS_PHASE": {
+        "interface_ports": [
+          "dds_compiler_A_channel_1/M_AXIS_PHASE",
+          "hbridge_signalgen_0_upgraded_ipi/s_axis_phase"
+        ]
+      }
+    },
+    "nets": {
+      "aresetn_1": {
+        "ports": [
+          "aresetn",
+          "axis_variable_A_channel_1/aresetn",
+          "hbridge_signalgen_0_upgraded_ipi/aresetn",
+          "util_vector_logic_1/Op2"
+        ]
+      },
+      "clk_wiz_0_clk_internal": {
+        "ports": [
+          "aclk",
+          "axis_variable_A_channel_1/aclk",
+          "dds_compiler_A_channel_1/aclk",
+          "hbridge_signalgen_0_upgraded_ipi/clk"
+        ]
+      },
+      "enable_All_1": {
+        "ports": [
+          "enable_All",
+          "util_vector_logic_4/Op1",
+          "util_vector_logic_5/Op1"
+        ]
+      },
+      "enable_H1_1": {
+        "ports": [
+          "enable_H1",
+          "util_vector_logic_2/Op1"
+        ]
+      },
+      "enable_H2_1": {
+        "ports": [
+          "enable_H2",
+          "util_vector_logic_3/Op1"
+        ]
+      },
+      "freq_1": {
+        "ports": [
+          "freq",
+          "xlconcat_A_channel_1/In0"
+        ]
+      },
+      "hbridge_signalgen_0_upgraded_ipi_H1": {
+        "ports": [
+          "hbridge_signalgen_0_upgraded_ipi/H1",
+          "util_vector_logic_2/Op2"
+        ]
+      },
+      "hbridge_signalgen_0_upgraded_ipi_H2": {
+        "ports": [
+          "hbridge_signalgen_0_upgraded_ipi/H2",
+          "util_vector_logic_3/Op2"
+        ]
+      },
+      "phase_1": {
+        "ports": [
+          "phase",
+          "xlconcat_A_channel_1/In1"
+        ]
+      },
+      "pulswidth_1": {
+        "ports": [
+          "pulswidth",
+          "xlslice_0/Din"
+        ]
+      },
+      "resync_1": {
+        "ports": [
+          "resync",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "dds_compiler_A_channel_1/aresetn"
+        ]
+      },
+      "util_vector_logic_2_Res": {
+        "ports": [
+          "util_vector_logic_2/Res",
+          "util_vector_logic_4/Op2"
+        ]
+      },
+      "util_vector_logic_3_Res": {
+        "ports": [
+          "util_vector_logic_3/Res",
+          "util_vector_logic_5/Op2"
+        ]
+      },
+      "util_vector_logic_4_Res": {
+        "ports": [
+          "util_vector_logic_4/Res",
+          "H1out"
+        ]
+      },
+      "util_vector_logic_5_Res": {
+        "ports": [
+          "util_vector_logic_5/Res",
+          "H2out"
+        ]
+      },
+      "xlconcat_A_channel_1_dout": {
+        "ports": [
+          "xlconcat_A_channel_1/dout",
+          "axis_variable_A_channel_1/cfg_data"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "hbridge_signalgen_0_upgraded_ipi/cfg_data"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,466 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x88CBD80AC886EE5F",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../RedPitayaDAQServer.gen/sources_1/bd/signal_ramp",
+      "name": "signal_ramp",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "axis_variable_0": "",
+      "dds_compiler_0": "",
+      "mult_gen_0": "",
+      "signal_ramper_0": "",
+      "util_vector_logic_0": "",
+      "xlslice_0": ""
+    },
+    "ports": {
+      "aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "aresetn"
+          },
+          "CLK_DOMAIN": {
+            "value": "signal_ramp_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "aresetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "enableRamping": {
+        "direction": "I"
+      },
+      "freq": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "ramp_state": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "signal_in": {
+        "type": "data",
+        "direction": "I",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "signal_out": {
+        "type": "data",
+        "direction": "O",
+        "left": "18",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 19} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 19}",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "startRampDown": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "axis_variable_0": {
+        "vlnv": "pavel-demin:user:axis_variable:1.0",
+        "xci_name": "signal_ramp_axis_variable_0_0",
+        "xci_path": "ip/signal_ramp_axis_variable_0_0/signal_ramp_axis_variable_0_0.xci",
+        "inst_hier_path": "axis_variable_0",
+        "parameters": {
+          "AXIS_TDATA_WIDTH": {
+            "value": "48"
+          }
+        }
+      },
+      "dds_compiler_0": {
+        "vlnv": "xilinx.com:ip:dds_compiler:6.0",
+        "xci_name": "signal_ramp_dds_compiler_0_0",
+        "xci_path": "ip/signal_ramp_dds_compiler_0_0/signal_ramp_dds_compiler_0_0.xci",
+        "inst_hier_path": "dds_compiler_0",
+        "parameters": {
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "DDS_Clock_Rate": {
+            "value": "125"
+          },
+          "Frequency_Resolution": {
+            "value": "0.4"
+          },
+          "Has_ARESETn": {
+            "value": "true"
+          },
+          "Has_Phase_Out": {
+            "value": "true"
+          },
+          "Has_TREADY": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "1"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Noise_Shaping": {
+            "value": "None"
+          },
+          "Output_Frequency1": {
+            "value": "0"
+          },
+          "Output_Width": {
+            "value": "3"
+          },
+          "PINC1": {
+            "value": "0"
+          },
+          "Parameter_Entry": {
+            "value": "Hardware_Parameters"
+          },
+          "PartsPresent": {
+            "value": "Phase_Generator_only"
+          },
+          "Phase_Increment": {
+            "value": "Programmable"
+          },
+          "Phase_Width": {
+            "value": "48"
+          },
+          "Phase_offset": {
+            "value": "None"
+          },
+          "S_PHASE_Has_TUSER": {
+            "value": "Not_Required"
+          }
+        }
+      },
+      "mult_gen_0": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "xci_name": "signal_ramp_mult_gen_0_0",
+        "xci_path": "ip/signal_ramp_mult_gen_0_0/signal_ramp_mult_gen_0_0.xci",
+        "inst_hier_path": "mult_gen_0",
+        "parameters": {
+          "Multiplier_Construction": {
+            "value": "Use_Mults"
+          },
+          "OutputWidthHigh": {
+            "value": "31"
+          },
+          "OutputWidthLow": {
+            "value": "13"
+          },
+          "PipeStages": {
+            "value": "3"
+          },
+          "PortAType": {
+            "value": "Signed"
+          },
+          "PortAWidth": {
+            "value": "19"
+          },
+          "PortBType": {
+            "value": "Signed"
+          },
+          "PortBWidth": {
+            "value": "16"
+          },
+          "Use_Custom_Output_Width": {
+            "value": "true"
+          }
+        }
+      },
+      "signal_ramper_0": {
+        "vlnv": "xilinx.com:module_ref:signal_ramper:1.0",
+        "xci_name": "signal_ramp_signal_ramper_0_0",
+        "xci_path": "ip/signal_ramp_signal_ramper_0_0/signal_ramp_signal_ramper_0_0.xci",
+        "inst_hier_path": "signal_ramper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "signal_ramper",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "s_axis_phase": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "6",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "signal_ramp_aclk",
+                "value_src": "default_prop"
+              },
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chan} size {attribs {resolve_type generated dependency chan_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency chan_stride format long minimum {} maximum {}} value 48} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_phase_out {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_out} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency phase_fractwidth format long minimum {} maximum {}} value 48} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}}}}} TDATA_WIDTH 48 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_chanid {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chanid} enabled {attribs {resolve_type generated dependency chanid_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency chanid_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_user {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value user} enabled {attribs {resolve_type generated dependency user_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency user_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency user_offset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+                "value_src": "ip_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_tdata_phase",
+                "direction": "I",
+                "left": "47",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_tvalid_phase",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "s_axis_phase",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "signal_ramp_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "enableRamping": {
+            "direction": "I"
+          },
+          "startRampDown": {
+            "direction": "I"
+          },
+          "ramp": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "rampState": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "signal_ramp_util_vector_logic_0_0",
+        "xci_path": "ip/signal_ramp_util_vector_logic_0_0/signal_ramp_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "signal_ramp_xlslice_0_0",
+        "xci_path": "ip/signal_ramp_xlslice_0_0/signal_ramp_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "1"
+          },
+          "DIN_TO": {
+            "value": "1"
+          },
+          "DIN_WIDTH": {
+            "value": "2"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "axis_variable_0_M_AXIS": {
+        "interface_ports": [
+          "axis_variable_0/M_AXIS",
+          "dds_compiler_0/S_AXIS_CONFIG"
+        ]
+      },
+      "dds_compiler_0_M_AXIS_PHASE": {
+        "interface_ports": [
+          "dds_compiler_0/M_AXIS_PHASE",
+          "signal_ramper_0/s_axis_phase"
+        ]
+      }
+    },
+    "nets": {
+      "aclk_1": {
+        "ports": [
+          "aclk",
+          "axis_variable_0/aclk",
+          "dds_compiler_0/aclk",
+          "mult_gen_0/CLK",
+          "signal_ramper_0/clk"
+        ]
+      },
+      "aresetn_1": {
+        "ports": [
+          "aresetn",
+          "axis_variable_0/aresetn",
+          "signal_ramper_0/aresetn",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "enableRamping_1": {
+        "ports": [
+          "enableRamping",
+          "signal_ramper_0/enableRamping"
+        ]
+      },
+      "freq_1": {
+        "ports": [
+          "freq",
+          "axis_variable_0/cfg_data"
+        ]
+      },
+      "signal_in_1": {
+        "ports": [
+          "signal_in",
+          "mult_gen_0/A"
+        ]
+      },
+      "signal_ramper_0_ramp": {
+        "ports": [
+          "signal_ramper_0/ramp",
+          "mult_gen_0/B"
+        ]
+      },
+      "signal_ramper_0_rampState": {
+        "ports": [
+          "mult_gen_0/P",
+          "signal_out"
+        ]
+      },
+      "signal_ramper_0_rampState1": {
+        "ports": [
+          "signal_ramper_0/rampState",
+          "ramp_state",
+          "xlslice_0/Din"
+        ]
+      },
+      "startRampDown_1": {
+        "ports": [
+          "startRampDown",
+          "signal_ramper_0/startRampDown"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "dds_compiler_0/aresetn"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "util_vector_logic_0/Op2"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,508 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD85E7F1ADABD9510",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../RedPitayaDAQServer.gen/sources_1/bd/new_waveform_gen",
+      "name": "new_waveform_gen",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "axis_variable_A_channel_1": "",
+      "dds_compiler_A_channel_1": "",
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "cmpy_0": "",
+      "xlslice_0": "",
+      "axis_variable_A_channel_2": "",
+      "Amp_phase_G_0": ""
+    },
+    "interface_ports": {
+      "M_AXIS_DOUT_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "new_waveform_gen_aclk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "0",
+            "value_src": "auto_prop"
+          },
+          "HAS_TREADY": {
+            "value": "0",
+            "value_src": "auto_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type generated dependency set_width format long minimum {} maximum {}} value 8} stride {attribs {resolve_type generated dependency set_stride format long minimum {} maximum {}} value 8} real {fixed {fractwidth {attribs {resolve_type generated dependency set_fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 16 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_a_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value a_tuser} enabled {attribs {resolve_type generated dependency a_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency a_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_b_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value b_tuser} enabled {attribs {resolve_type generated dependency b_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency b_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency b_offset format long minimum {} maximum {}} value 0}}} field_ctrl_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value ctrl_tuser} enabled {attribs {resolve_type generated dependency ctrl_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency ctrl_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency ctrl_offset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "2",
+            "value_src": "auto_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "auto_prop"
+          }
+        }
+      }
+    },
+    "ports": {
+      "aclk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "M_AXIS_DOUT_0",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "aresetn",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "new_waveform_gen_aclk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "resync": {
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "aresetn": {
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "freq": {
+        "direction": "I",
+        "left": "47",
+        "right": "0"
+      },
+      "phase": {
+        "direction": "I",
+        "left": "47",
+        "right": "0"
+      },
+      "amplitude": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "axis_variable_A_channel_1": {
+        "vlnv": "pavel-demin:user:axis_variable:1.0",
+        "xci_name": "new_waveform_gen_axis_variable_A_channel_1_0",
+        "xci_path": "ip\\new_waveform_gen_axis_variable_A_channel_1_0\\new_waveform_gen_axis_variable_A_channel_1_0.xci",
+        "inst_hier_path": "axis_variable_A_channel_1",
+        "parameters": {
+          "AXIS_TDATA_WIDTH": {
+            "value": "48"
+          }
+        }
+      },
+      "dds_compiler_A_channel_1": {
+        "vlnv": "xilinx.com:ip:dds_compiler:6.0",
+        "xci_name": "new_waveform_gen_dds_compiler_A_channel_1_0",
+        "xci_path": "ip\\new_waveform_gen_dds_compiler_A_channel_1_0\\new_waveform_gen_dds_compiler_A_channel_1_0.xci",
+        "inst_hier_path": "dds_compiler_A_channel_1",
+        "parameters": {
+          "Amplitude_Mode": {
+            "value": "Unit_Circle"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "DDS_Clock_Rate": {
+            "value": "125"
+          },
+          "DSP48_Use": {
+            "value": "Maximal"
+          },
+          "Frequency_Resolution": {
+            "value": "4.440893e-7"
+          },
+          "Has_ACLKEN": {
+            "value": "false"
+          },
+          "Has_ARESETn": {
+            "value": "true"
+          },
+          "Has_Phase_Out": {
+            "value": "true"
+          },
+          "Has_TREADY": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "9"
+          },
+          "Latency_Configuration": {
+            "value": "Auto"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "M_PHASE_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Memory_Type": {
+            "value": "Auto"
+          },
+          "Noise_Shaping": {
+            "value": "None"
+          },
+          "Optimization_Goal": {
+            "value": "Auto"
+          },
+          "Output_Frequency1": {
+            "value": "0"
+          },
+          "Output_Selection": {
+            "value": "Sine_and_Cosine"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "PINC1": {
+            "value": "0"
+          },
+          "POFF1": {
+            "value": "0"
+          },
+          "Parameter_Entry": {
+            "value": "Hardware_Parameters"
+          },
+          "PartsPresent": {
+            "value": "Phase_Generator_and_SIN_COS_LUT"
+          },
+          "Phase_Increment": {
+            "value": "Programmable"
+          },
+          "Phase_Offset_Angles1": {
+            "value": "0"
+          },
+          "Phase_Width": {
+            "value": "48"
+          },
+          "Phase_offset": {
+            "value": "Fixed"
+          },
+          "Resync": {
+            "value": "false"
+          },
+          "S_PHASE_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Spurious_Free_Dynamic_Range": {
+            "value": "96"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "new_waveform_gen_util_vector_logic_0_0",
+        "xci_path": "ip\\new_waveform_gen_util_vector_logic_0_0\\new_waveform_gen_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "new_waveform_gen_util_vector_logic_1_0",
+        "xci_path": "ip\\new_waveform_gen_util_vector_logic_1_0\\new_waveform_gen_util_vector_logic_1_0.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "cmpy_0": {
+        "vlnv": "xilinx.com:ip:cmpy:6.0",
+        "xci_name": "new_waveform_gen_cmpy_0_0",
+        "xci_path": "ip\\new_waveform_gen_cmpy_0_0\\new_waveform_gen_cmpy_0_0.xci",
+        "inst_hier_path": "cmpy_0",
+        "parameters": {
+          "APortWidth": {
+            "value": "16"
+          },
+          "BPortWidth": {
+            "value": "16"
+          },
+          "LatencyConfig": {
+            "value": "Manual"
+          },
+          "MinimumLatency": {
+            "value": "13"
+          },
+          "OutputWidth": {
+            "value": "8"
+          },
+          "RoundMode": {
+            "value": "Truncate"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "new_waveform_gen_xlslice_0_0",
+        "xci_path": "ip\\new_waveform_gen_xlslice_0_0\\new_waveform_gen_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "47"
+          },
+          "DIN_TO": {
+            "value": "32"
+          },
+          "DIN_WIDTH": {
+            "value": "48"
+          },
+          "DOUT_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "axis_variable_A_channel_2": {
+        "vlnv": "pavel-demin:user:axis_variable:1.0",
+        "xci_name": "new_waveform_gen_axis_variable_A_channel_1_1",
+        "xci_path": "ip\\new_waveform_gen_axis_variable_A_channel_1_1\\new_waveform_gen_axis_variable_A_channel_1_1.xci",
+        "inst_hier_path": "axis_variable_A_channel_2",
+        "parameters": {
+          "AXIS_TDATA_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "Amp_phase_G_0": {
+        "vlnv": "xilinx.com:module_ref:Amp_phase_G:1.0",
+        "xci_name": "new_waveform_gen_Amp_phase_G_0_0",
+        "xci_path": "ip\\new_waveform_gen_Amp_phase_G_0_0\\new_waveform_gen_Amp_phase_G_0_0.xci",
+        "inst_hier_path": "Amp_phase_G_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Amp_phase_G",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "new_waveform_gen_aclk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "phase": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "amplitude": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "G": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "axis_variable_A_channel_1_M_AXIS": {
+        "interface_ports": [
+          "axis_variable_A_channel_1/M_AXIS",
+          "dds_compiler_A_channel_1/S_AXIS_CONFIG"
+        ]
+      },
+      "axis_variable_A_channel_2_M_AXIS": {
+        "interface_ports": [
+          "axis_variable_A_channel_2/M_AXIS",
+          "cmpy_0/S_AXIS_B"
+        ]
+      },
+      "cmpy_0_M_AXIS_DOUT": {
+        "interface_ports": [
+          "M_AXIS_DOUT_0",
+          "cmpy_0/M_AXIS_DOUT"
+        ]
+      },
+      "dds_compiler_A_channel_1_M_AXIS_DATA": {
+        "interface_ports": [
+          "dds_compiler_A_channel_1/M_AXIS_DATA",
+          "cmpy_0/S_AXIS_A"
+        ]
+      }
+    },
+    "nets": {
+      "Amp_phase_G_0_G": {
+        "ports": [
+          "Amp_phase_G_0/G",
+          "axis_variable_A_channel_2/cfg_data"
+        ]
+      },
+      "Op1_0_1": {
+        "ports": [
+          "resync",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "Op2_0_1": {
+        "ports": [
+          "aresetn",
+          "util_vector_logic_1/Op2",
+          "axis_variable_A_channel_1/aresetn",
+          "axis_variable_A_channel_2/aresetn",
+          "Amp_phase_G_0/aresetn"
+        ]
+      },
+      "aclk_0_1": {
+        "ports": [
+          "aclk_0",
+          "axis_variable_A_channel_1/aclk",
+          "dds_compiler_A_channel_1/aclk",
+          "axis_variable_A_channel_2/aclk",
+          "cmpy_0/aclk",
+          "Amp_phase_G_0/clk"
+        ]
+      },
+      "amplitude_0_1": {
+        "ports": [
+          "amplitude",
+          "Amp_phase_G_0/amplitude"
+        ]
+      },
+      "freq_1": {
+        "ports": [
+          "freq",
+          "axis_variable_A_channel_1/cfg_data"
+        ]
+      },
+      "phase_1": {
+        "ports": [
+          "phase",
+          "xlslice_0/Din"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "dds_compiler_A_channel_1/aresetn"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "Amp_phase_G_0/phase"
+        ]
+      }
+    }
+  }
+}

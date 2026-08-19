@@ -1,0 +1,205 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xFEEAD6AB0ABF00B4",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../RedPitayaDAQServer.gen/sources_1/bd/signal_calib",
+      "name": "signal_calib",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "c_addsub_1": "",
+      "signal_limit_0": ""
+    },
+    "ports": {
+      "aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "signal_calib_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "calib_offset": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "limit_lower": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "limit_upper": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "signal_in": {
+        "direction": "I",
+        "left": "18",
+        "right": "0"
+      },
+      "signal_out": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "c_addsub_1": {
+        "vlnv": "xilinx.com:ip:c_addsub:12.0",
+        "xci_name": "signal_calib_c_addsub_1_0",
+        "xci_path": "ip/signal_calib_c_addsub_1_0/signal_calib_c_addsub_1_0.xci",
+        "inst_hier_path": "c_addsub_1",
+        "parameters": {
+          "A_Type": {
+            "value": "Signed"
+          },
+          "A_Width": {
+            "value": "19"
+          },
+          "B_Type": {
+            "value": "Signed"
+          },
+          "B_Value": {
+            "value": "0000000000000000"
+          },
+          "B_Width": {
+            "value": "16"
+          },
+          "CE": {
+            "value": "false"
+          },
+          "Implementation": {
+            "value": "DSP48"
+          },
+          "Latency": {
+            "value": "1"
+          },
+          "Out_Width": {
+            "value": "19"
+          }
+        }
+      },
+      "signal_limit_0": {
+        "vlnv": "xilinx.com:module_ref:signal_limit:1.0",
+        "xci_name": "signal_calib_signal_limit_0_0",
+        "xci_path": "ip/signal_calib_signal_limit_0_0/signal_calib_signal_limit_0_0.xci",
+        "inst_hier_path": "signal_limit_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "signal_limit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "signal_calib_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "signal_in": {
+            "direction": "I",
+            "left": "18",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 19} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 19}",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "limit_upper": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "limit_lower": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "limited_signal": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "aclk_1": {
+        "ports": [
+          "aclk",
+          "c_addsub_1/CLK",
+          "signal_limit_0/clk"
+        ]
+      },
+      "c_addsub_1_S": {
+        "ports": [
+          "c_addsub_1/S",
+          "signal_limit_0/signal_in"
+        ]
+      },
+      "calib_offset_1": {
+        "ports": [
+          "calib_offset",
+          "c_addsub_1/B"
+        ]
+      },
+      "limit_lower_1": {
+        "ports": [
+          "limit_lower",
+          "signal_limit_0/limit_lower"
+        ]
+      },
+      "limit_upper_1": {
+        "ports": [
+          "limit_upper",
+          "signal_limit_0/limit_upper"
+        ]
+      },
+      "signal_in_1": {
+        "ports": [
+          "signal_in",
+          "c_addsub_1/A"
+        ]
+      },
+      "signal_limit_0_limited_signal": {
+        "ports": [
+          "signal_limit_0/limited_signal",
+          "signal_out"
+        ]
+      }
+    }
+  }
+}
