@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.617054",
-   "Default View_TopLeft":"-235,-10",
+   "Default View_TopLeft":"-235,233",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -73,7 +73,7 @@ preplace netloc xlslice_7_Dout 1 2 1 790J 210n
 preplace netloc awg_0_bram_1 1 0 3 NJ 670 NJ 670 NJ
 preplace netloc awg_1_bram_1 1 0 3 NJ 50 NJ 50 NJ
 levelinfo -pg 1 0 170 520 980 1330 1500
-pagesize -pg 1 -db -bbox -sgen -200 -10 1680 1280
+pagesize -pg 1 -db -bbox -sgen -190 -10 1670 1280
 "
 }
 0

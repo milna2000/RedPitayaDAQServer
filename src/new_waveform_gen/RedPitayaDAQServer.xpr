@@ -63,13 +63,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="1"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
+    <Option Name="WTActivehdlExportSim" Val="4"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -182,27 +182,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_auto_ds_1/system_auto_ds_1.xci">
-          <Proxy FileSetName="system_auto_ds_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_m02_data_fifo_0/system_m02_data_fifo_0.xci">
-          <Proxy FileSetName="system_m02_data_fifo_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_auto_pc_1/system_auto_pc_1.xci">
-          <Proxy FileSetName="system_auto_pc_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_m01_data_fifo_0/system_m01_data_fifo_0.xci">
-          <Proxy FileSetName="system_m01_data_fifo_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_auto_ds_0/system_auto_ds_0.xci">
-          <Proxy FileSetName="system_auto_ds_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_auto_us_df_0/system_auto_us_df_0.xci">
-          <Proxy FileSetName="system_auto_us_df_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_auto_pc_0/system_auto_pc_0.xci">
-          <Proxy FileSetName="system_auto_pc_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/system/hdl/system_wrapper.v">
         <FileInfo>
@@ -311,6 +290,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/ip/cordic_0/cordic_0.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="system_wrapper"/>
@@ -337,14 +324,6 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/new/tb_Amp_phase_G.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="system_wrapper"/>
@@ -427,39 +406,18 @@
       </Config>
     </FileSet>
     <FileSet Name="waveform_gen_inst_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/waveform_gen_inst_0" RelGenDir="$PGENDIR/waveform_gen_inst_0">
-      <File Path="$PGENDIR/sources_1/bd/system/bd/waveform_gen_inst_0/waveform_gen_inst_0.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="TopModule" Val="waveform_gen_inst_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="waveform_gen_inst_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/waveform_gen_inst_1" RelGenDir="$PGENDIR/waveform_gen_inst_1">
-      <File Path="$PGENDIR/sources_1/bd/system/bd/waveform_gen_inst_1/waveform_gen_inst_1.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="TopModule" Val="waveform_gen_inst_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="waveform_gen_inst_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/waveform_gen_inst_2" RelGenDir="$PGENDIR/waveform_gen_inst_2">
-      <File Path="$PGENDIR/sources_1/bd/system/bd/waveform_gen_inst_2/waveform_gen_inst_2.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="TopModule" Val="waveform_gen_inst_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
@@ -510,6 +468,16 @@
       </Config>
     </FileSet>
     <FileSet Name="new_waveform_gen_inst_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_0">
+      <File Path="$PGENDIR/sources_1/bd/system/bd/new_waveform_gen_inst_0/new_waveform_gen_inst_0.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="new_waveform_gen_inst_0.bd" FileRelPathName="ip/new_waveform_gen_inst_0_Amp_phase_G_0_0/new_waveform_gen_inst_0_Amp_phase_G_0_0.xci">
+          <Proxy FileSetName="new_waveform_gen_inst_0_Amp_phase_G_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
       <Config>
         <Option Name="TopModule" Val="new_waveform_gen_inst_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
@@ -518,11 +486,13 @@
     <FileSet Name="new_waveform_gen_inst_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_1" RelGenDir="$PGENDIR/new_waveform_gen_inst_1">
       <File Path="$PGENDIR/sources_1/bd/system/bd/new_waveform_gen_inst_1/new_waveform_gen_inst_1.bd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="new_waveform_gen_inst_1.bd" FileRelPathName="ip/new_waveform_gen_inst_1_Amp_phase_G_0_0/new_waveform_gen_inst_1_Amp_phase_G_0_0.xci">
+          <Proxy FileSetName="new_waveform_gen_inst_1_Amp_phase_G_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <Config>
         <Option Name="TopModule" Val="new_waveform_gen_inst_1"/>
@@ -552,45 +522,12 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="new_waveform_gen_inst_3.bd" FileRelPathName="ip/new_waveform_gen_inst_3_cmpy_0_0/new_waveform_gen_inst_3_cmpy_0_0.xci">
-          <Proxy FileSetName="new_waveform_gen_inst_3_cmpy_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="new_waveform_gen_inst_3.bd" FileRelPathName="ip/new_waveform_gen_inst_3_dds_compiler_A_channel_1_0/new_waveform_gen_inst_3_dds_compiler_A_channel_1_0.xci">
-          <Proxy FileSetName="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="new_waveform_gen_inst_3.bd" FileRelPathName="ip/new_waveform_gen_inst_3_axis_variable_A_channel_2_0/new_waveform_gen_inst_3_axis_variable_A_channel_2_0.xci">
-          <Proxy FileSetName="new_waveform_gen_inst_3_axis_variable_A_channel_2_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="new_waveform_gen_inst_3.bd" FileRelPathName="ip/new_waveform_gen_inst_3_Amp_phase_G_0_0/new_waveform_gen_inst_3_Amp_phase_G_0_0.xci">
           <Proxy FileSetName="new_waveform_gen_inst_3_Amp_phase_G_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <Config>
         <Option Name="TopModule" Val="new_waveform_gen_inst_3"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_3_dds_compiler_A_channel_1_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_3_dds_compiler_A_channel_1_0">
-      <Config>
-        <Option Name="TopModule" Val="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="new_waveform_gen_inst_3_cmpy_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_3_cmpy_0_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_3_cmpy_0_0">
-      <Config>
-        <Option Name="TopModule" Val="new_waveform_gen_inst_3_cmpy_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="new_waveform_gen_inst_3_axis_variable_A_channel_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_3_axis_variable_A_channel_2_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_3_axis_variable_A_channel_2_0">
-      <Config>
-        <Option Name="TopModule" Val="new_waveform_gen_inst_3_axis_variable_A_channel_2_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="new_waveform_gen_inst_3_Amp_phase_G_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_3_Amp_phase_G_0_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_3_Amp_phase_G_0_0">
-      <Config>
-        <Option Name="TopModule" Val="new_waveform_gen_inst_3_Amp_phase_G_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -601,9 +538,40 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="new_waveform_gen_inst_4.bd" FileRelPathName="ip/new_waveform_gen_inst_4_Amp_phase_G_0_0/new_waveform_gen_inst_4_Amp_phase_G_0_0.xci">
+          <Proxy FileSetName="new_waveform_gen_inst_4_Amp_phase_G_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <Config>
         <Option Name="TopModule" Val="new_waveform_gen_inst_4"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="new_waveform_gen_inst_5" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_5" RelGenDir="$PGENDIR/new_waveform_gen_inst_5">
+      <File Path="$PGENDIR/sources_1/bd/system/bd/new_waveform_gen_inst_5/new_waveform_gen_inst_5.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="new_waveform_gen_inst_5.bd" FileRelPathName="ip/new_waveform_gen_inst_5_Amp_phase_G_0_0/new_waveform_gen_inst_5_Amp_phase_G_0_0.xci">
+          <Proxy FileSetName="new_waveform_gen_inst_5_Amp_phase_G_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="new_waveform_gen_inst_5"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="new_waveform_gen_inst_4_Amp_phase_G_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_4_Amp_phase_G_0_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_4_Amp_phase_G_0_0">
+      <Config>
+        <Option Name="TopModule" Val="new_waveform_gen_inst_4_Amp_phase_G_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="new_waveform_gen_inst_1_Amp_phase_G_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_1_Amp_phase_G_0_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_1_Amp_phase_G_0_0">
+      <Config>
+        <Option Name="TopModule" Val="new_waveform_gen_inst_1_Amp_phase_G_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -613,45 +581,21 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="system_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_auto_pc_0" RelGenDir="$PGENDIR/system_auto_pc_0">
+    <FileSet Name="new_waveform_gen_inst_5_Amp_phase_G_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_5_Amp_phase_G_0_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_5_Amp_phase_G_0_0">
       <Config>
-        <Option Name="TopModule" Val="system_auto_pc_0"/>
+        <Option Name="TopModule" Val="new_waveform_gen_inst_5_Amp_phase_G_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="system_auto_pc_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_auto_pc_1" RelGenDir="$PGENDIR/system_auto_pc_1">
+    <FileSet Name="new_waveform_gen_inst_3_Amp_phase_G_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_3_Amp_phase_G_0_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_3_Amp_phase_G_0_0">
       <Config>
-        <Option Name="TopModule" Val="system_auto_pc_1"/>
+        <Option Name="TopModule" Val="new_waveform_gen_inst_3_Amp_phase_G_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="system_auto_us_df_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_auto_us_df_0" RelGenDir="$PGENDIR/system_auto_us_df_0">
+    <FileSet Name="new_waveform_gen_inst_0_Amp_phase_G_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/new_waveform_gen_inst_0_Amp_phase_G_0_0" RelGenDir="$PGENDIR/new_waveform_gen_inst_0_Amp_phase_G_0_0">
       <Config>
-        <Option Name="TopModule" Val="system_auto_us_df_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="system_m01_data_fifo_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_m01_data_fifo_0" RelGenDir="$PGENDIR/system_m01_data_fifo_0">
-      <Config>
-        <Option Name="TopModule" Val="system_m01_data_fifo_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="system_auto_ds_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_auto_ds_0" RelGenDir="$PGENDIR/system_auto_ds_0">
-      <Config>
-        <Option Name="TopModule" Val="system_auto_ds_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="system_m02_data_fifo_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_m02_data_fifo_0" RelGenDir="$PGENDIR/system_m02_data_fifo_0">
-      <Config>
-        <Option Name="TopModule" Val="system_m02_data_fifo_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="system_auto_ds_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_auto_ds_1" RelGenDir="$PGENDIR/system_auto_ds_1">
-      <Config>
-        <Option Name="TopModule" Val="system_auto_ds_1"/>
+        <Option Name="TopModule" Val="new_waveform_gen_inst_0_Amp_phase_G_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -685,9 +629,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_3_dds_compiler_A_channel_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_dds_compiler_A_channel_1_0_synth_1">
+    <Run Id="new_waveform_gen_inst_4_Amp_phase_G_0_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_4_Amp_phase_G_0_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_4_Amp_phase_G_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_4_Amp_phase_G_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_4_Amp_phase_G_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -695,29 +641,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="new_waveform_gen_inst_3_cmpy_0_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_3_cmpy_0_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_cmpy_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_3_cmpy_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_cmpy_0_0_synth_1">
+    <Run Id="new_waveform_gen_inst_1_Amp_phase_G_0_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_1_Amp_phase_G_0_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_1_Amp_phase_G_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_1_Amp_phase_G_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_1_Amp_phase_G_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="new_waveform_gen_inst_3_axis_variable_A_channel_2_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_3_axis_variable_A_channel_2_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_axis_variable_A_channel_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_3_axis_variable_A_channel_2_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_axis_variable_A_channel_2_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="new_waveform_gen_inst_3_Amp_phase_G_0_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_3_Amp_phase_G_0_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_Amp_phase_G_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_3_Amp_phase_G_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_Amp_phase_G_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -737,7 +665,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="system_auto_pc_0" Part="xc7z010clg400-1" ConstrsSet="system_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_auto_pc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_pc_0_synth_1">
+    <Run Id="new_waveform_gen_inst_5_Amp_phase_G_0_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_5_Amp_phase_G_0_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_5_Amp_phase_G_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_5_Amp_phase_G_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_5_Amp_phase_G_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -749,7 +677,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_auto_pc_1_synth_1" Type="Ft3:Synth" SrcSet="system_auto_pc_1" Part="xc7z010clg400-1" ConstrsSet="system_auto_pc_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_auto_pc_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_pc_1_synth_1">
+    <Run Id="new_waveform_gen_inst_3_Amp_phase_G_0_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_3_Amp_phase_G_0_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_Amp_phase_G_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_3_Amp_phase_G_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_Amp_phase_G_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -761,7 +689,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_auto_us_df_0_synth_1" Type="Ft3:Synth" SrcSet="system_auto_us_df_0" Part="xc7z010clg400-1" ConstrsSet="system_auto_us_df_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_auto_us_df_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_us_df_0_synth_1">
+    <Run Id="new_waveform_gen_inst_0_Amp_phase_G_0_0_synth_1" Type="Ft3:Synth" SrcSet="new_waveform_gen_inst_0_Amp_phase_G_0_0" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_0_Amp_phase_G_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/new_waveform_gen_inst_0_Amp_phase_G_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_0_Amp_phase_G_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -773,55 +701,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_m01_data_fifo_0_synth_1" Type="Ft3:Synth" SrcSet="system_m01_data_fifo_0" Part="xc7z010clg400-1" ConstrsSet="system_m01_data_fifo_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_m01_data_fifo_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_m01_data_fifo_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="system_auto_ds_0_synth_1" Type="Ft3:Synth" SrcSet="system_auto_ds_0" Part="xc7z010clg400-1" ConstrsSet="system_auto_ds_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_auto_ds_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_ds_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="system_m02_data_fifo_0_synth_1" Type="Ft3:Synth" SrcSet="system_m02_data_fifo_0" Part="xc7z010clg400-1" ConstrsSet="system_m02_data_fifo_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_m02_data_fifo_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_m02_data_fifo_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="system_auto_ds_1_synth_1" Type="Ft3:Synth" SrcSet="system_auto_ds_1" Part="xc7z010clg400-1" ConstrsSet="system_auto_ds_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_auto_ds_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_ds_1_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../Milna/TUHH/Project Arbeit/Vivado/fpga/xc7z010clg400-1/firmware/RedPitayaDAQServer.srcs/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../Milna/TUHH/Project Arbeit/Vivado/fpga/xc7z010clg400-1/firmware/RedPitayaDAQServer.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -836,14 +716,15 @@
           <Option Id="BinFile">1</Option>
         </Step>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_3_dds_compiler_A_channel_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_dds_compiler_A_channel_1_0_impl_1">
+    <Run Id="new_waveform_gen_inst_4_Amp_phase_G_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_4_Amp_phase_G_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_4_Amp_phase_G_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_4_Amp_phase_G_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -858,43 +739,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="new_waveform_gen_inst_3_cmpy_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_cmpy_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_3_cmpy_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_cmpy_0_0_impl_1">
+    <Run Id="new_waveform_gen_inst_1_Amp_phase_G_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_1_Amp_phase_G_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_1_Amp_phase_G_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_1_Amp_phase_G_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="new_waveform_gen_inst_3_axis_variable_A_channel_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_axis_variable_A_channel_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_3_axis_variable_A_channel_2_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_axis_variable_A_channel_2_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="new_waveform_gen_inst_3_Amp_phase_G_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_Amp_phase_G_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_3_Amp_phase_G_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_Amp_phase_G_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -928,7 +777,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_auto_pc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_pc_0_impl_1">
+    <Run Id="new_waveform_gen_inst_5_Amp_phase_G_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_5_Amp_phase_G_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_5_Amp_phase_G_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_5_Amp_phase_G_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>
@@ -947,7 +796,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_auto_pc_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_auto_pc_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_auto_pc_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_pc_1_impl_1">
+    <Run Id="new_waveform_gen_inst_3_Amp_phase_G_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_3_Amp_phase_G_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_3_Amp_phase_G_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_3_Amp_phase_G_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>
@@ -966,83 +815,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="system_auto_us_df_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_auto_us_df_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_auto_us_df_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_us_df_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="system_m01_data_fifo_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_m01_data_fifo_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_m01_data_fifo_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_m01_data_fifo_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="system_auto_ds_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_auto_ds_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_auto_ds_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_ds_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="system_m02_data_fifo_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_m02_data_fifo_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_m02_data_fifo_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_m02_data_fifo_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="system_auto_ds_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_auto_ds_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_auto_ds_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_auto_ds_1_impl_1">
+    <Run Id="new_waveform_gen_inst_0_Amp_phase_G_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="new_waveform_gen_inst_0_Amp_phase_G_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="new_waveform_gen_inst_0_Amp_phase_G_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/new_waveform_gen_inst_0_Amp_phase_G_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>

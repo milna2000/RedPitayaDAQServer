@@ -113,10 +113,10 @@
             "xlconstant_0": "",
             "xlconstant_1": ""
           },
-          "waveform_gen_0": "",
-          "waveform_gen_1": "",
-          "waveform_gen_2": "",
-          "xlconstant_0": ""
+          "xlconstant_0": "",
+          "new_waveform_gen_0": "",
+          "new_waveform_gen_1": "",
+          "new_waveform_gen_2": ""
         },
         "signal_compose1": {
           "signal_calib_0": "",
@@ -4585,419 +4585,542 @@
                   }
                 }
               },
-              "waveform_gen_0": {
-                "parameters": {
-                  "ACTIVE_SIM_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "ACTIVE_SYNTH_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "ENABLE_DFX": {
-                    "value": "0"
-                  },
-                  "LIST_SIM_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "LIST_SYNTH_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "LOCK_PROPAGATE": {
-                    "value": "0"
-                  }
-                },
-                "ports": {
-                  "aclk": {
-                    "type": "clk",
-                    "direction": "I",
-                    "parameters": {
-                      "ASSOCIATED_RESET": {
-                        "value": "aresetn",
-                        "value_src": "strong"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "/clk_wiz_0_clk_out1",
-                        "value_src": "ip_prop"
-                      },
-                      "FREQ_HZ": {
-                        "value": "125000000",
-                        "value_src": "ip_prop"
-                      },
-                      "FREQ_TOLERANCE_HZ": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "PHASE": {
-                        "value": "0.0",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  },
-                  "amplitude": {
-                    "type": "data",
-                    "direction": "I",
-                    "left": "15",
-                    "right": "0",
-                    "parameters": {
-                      "LAYERED_METADATA": {
-                        "value": "undef",
-                        "value_src": "strong"
-                      }
-                    }
-                  },
-                  "aresetn": {
-                    "type": "rst",
-                    "direction": "I",
-                    "parameters": {
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "POLARITY": {
-                        "value": "ACTIVE_LOW",
-                        "value_src": "strong"
-                      }
-                    }
-                  },
-                  "cfg_data": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "freq": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "m_axis_data_tvalid_1": {
-                    "direction": "O"
-                  },
-                  "phase": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "resync": {
-                    "direction": "I",
-                    "parameters": {
-                      "PortType": {
-                        "value": "undef",
-                        "value_src": "ip_prop"
-                      },
-                      "PortType.PROP_SRC": {
-                        "value": "false",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  },
-                  "wave": {
-                    "type": "data",
-                    "direction": "O",
-                    "left": "15",
-                    "right": "0",
-                    "parameters": {
-                      "LAYERED_METADATA": {
-                        "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  }
-                },
-                "post_compiled_compname": "waveform_gen_inst_0",
-                "architecture": "zynq",
-                "variant_info": {
-                  "waveform_gen.bd": {
-                    "scoped_diagram": "waveform_gen_inst_0.bd",
-                    "design_checksum": "0x902093FD",
-                    "ref_name": "waveform_gen",
-                    "ref_subinst_path": "system_waveform_gen_0",
-                    "ref_type": "Block Design",
-                    "source_type": "all",
-                    "active": "all"
-                  }
-                }
-              },
-              "waveform_gen_1": {
-                "parameters": {
-                  "ACTIVE_SIM_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "ACTIVE_SYNTH_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "ENABLE_DFX": {
-                    "value": "0"
-                  },
-                  "LIST_SIM_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "LIST_SYNTH_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "LOCK_PROPAGATE": {
-                    "value": "0"
-                  }
-                },
-                "ports": {
-                  "aclk": {
-                    "type": "clk",
-                    "direction": "I",
-                    "parameters": {
-                      "ASSOCIATED_RESET": {
-                        "value": "aresetn",
-                        "value_src": "strong"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "/clk_wiz_0_clk_out1",
-                        "value_src": "ip_prop"
-                      },
-                      "FREQ_HZ": {
-                        "value": "125000000",
-                        "value_src": "ip_prop"
-                      },
-                      "FREQ_TOLERANCE_HZ": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "PHASE": {
-                        "value": "0.0",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  },
-                  "amplitude": {
-                    "type": "data",
-                    "direction": "I",
-                    "left": "15",
-                    "right": "0",
-                    "parameters": {
-                      "LAYERED_METADATA": {
-                        "value": "undef",
-                        "value_src": "strong"
-                      }
-                    }
-                  },
-                  "aresetn": {
-                    "type": "rst",
-                    "direction": "I",
-                    "parameters": {
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "POLARITY": {
-                        "value": "ACTIVE_LOW",
-                        "value_src": "strong"
-                      }
-                    }
-                  },
-                  "cfg_data": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "freq": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "m_axis_data_tvalid_1": {
-                    "direction": "O"
-                  },
-                  "phase": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "resync": {
-                    "direction": "I",
-                    "parameters": {
-                      "PortType": {
-                        "value": "undef",
-                        "value_src": "ip_prop"
-                      },
-                      "PortType.PROP_SRC": {
-                        "value": "false",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  },
-                  "wave": {
-                    "type": "data",
-                    "direction": "O",
-                    "left": "15",
-                    "right": "0",
-                    "parameters": {
-                      "LAYERED_METADATA": {
-                        "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  }
-                },
-                "post_compiled_compname": "waveform_gen_inst_1",
-                "architecture": "zynq",
-                "variant_info": {
-                  "waveform_gen.bd": {
-                    "scoped_diagram": "waveform_gen_inst_1.bd",
-                    "design_checksum": "0x902093FD",
-                    "ref_name": "waveform_gen",
-                    "ref_subinst_path": "systemwaveform_gen_1",
-                    "ref_type": "Block Design",
-                    "source_type": "all",
-                    "active": "all"
-                  }
-                }
-              },
-              "waveform_gen_2": {
-                "parameters": {
-                  "ACTIVE_SIM_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "ACTIVE_SYNTH_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "ENABLE_DFX": {
-                    "value": "0"
-                  },
-                  "LIST_SIM_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "LIST_SYNTH_BD": {
-                    "value": "waveform_gen.bd"
-                  },
-                  "LOCK_PROPAGATE": {
-                    "value": "0"
-                  }
-                },
-                "ports": {
-                  "aclk": {
-                    "type": "clk",
-                    "direction": "I",
-                    "parameters": {
-                      "ASSOCIATED_RESET": {
-                        "value": "aresetn",
-                        "value_src": "strong"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "/clk_wiz_0_clk_out1",
-                        "value_src": "ip_prop"
-                      },
-                      "FREQ_HZ": {
-                        "value": "125000000",
-                        "value_src": "ip_prop"
-                      },
-                      "FREQ_TOLERANCE_HZ": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "PHASE": {
-                        "value": "0.0",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  },
-                  "amplitude": {
-                    "type": "data",
-                    "direction": "I",
-                    "left": "15",
-                    "right": "0",
-                    "parameters": {
-                      "LAYERED_METADATA": {
-                        "value": "undef",
-                        "value_src": "strong"
-                      }
-                    }
-                  },
-                  "aresetn": {
-                    "type": "rst",
-                    "direction": "I",
-                    "parameters": {
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "POLARITY": {
-                        "value": "ACTIVE_LOW",
-                        "value_src": "strong"
-                      }
-                    }
-                  },
-                  "cfg_data": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "freq": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "m_axis_data_tvalid_1": {
-                    "direction": "O"
-                  },
-                  "phase": {
-                    "direction": "I",
-                    "left": "47",
-                    "right": "0"
-                  },
-                  "resync": {
-                    "direction": "I",
-                    "parameters": {
-                      "PortType": {
-                        "value": "undef",
-                        "value_src": "ip_prop"
-                      },
-                      "PortType.PROP_SRC": {
-                        "value": "false",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  },
-                  "wave": {
-                    "type": "data",
-                    "direction": "O",
-                    "left": "15",
-                    "right": "0",
-                    "parameters": {
-                      "LAYERED_METADATA": {
-                        "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
-                        "value_src": "ip_prop"
-                      }
-                    }
-                  }
-                },
-                "post_compiled_compname": "waveform_gen_inst_2",
-                "architecture": "zynq",
-                "variant_info": {
-                  "waveform_gen.bd": {
-                    "scoped_diagram": "waveform_gen_inst_2.bd",
-                    "design_checksum": "0x902093FD",
-                    "ref_name": "waveform_gen",
-                    "ref_subinst_path": "systemwaveform_gen_2",
-                    "ref_type": "Block Design",
-                    "source_type": "all",
-                    "active": "all"
-                  }
-                }
-              },
               "xlconstant_0": {
                 "vlnv": "xilinx.com:ip:xlconstant:1.1",
                 "xci_name": "system_xlconstant_0_1",
                 "xci_path": "ip\\system_xlconstant_0_1\\system_xlconstant_0_1.xci",
                 "inst_hier_path": "fourier_synth_standard/signal_compose/xlconstant_0"
+              },
+              "new_waveform_gen_0": {
+                "parameters": {
+                  "ACTIVE_SIM_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "ACTIVE_SYNTH_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "ENABLE_DFX": {
+                    "value": "0"
+                  },
+                  "LIST_SIM_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "LIST_SYNTH_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "LOCK_PROPAGATE": {
+                    "value": "0"
+                  }
+                },
+                "interface_ports": {
+                  "M_AXIS_DOUT_0": {
+                    "mode": "Master",
+                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                    "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                    "parameters": {
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "125000000",
+                        "value_src": "ip_prop"
+                      },
+                      "HAS_TKEEP": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "HAS_TLAST": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      },
+                      "HAS_TREADY": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      },
+                      "HAS_TSTRB": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "default"
+                      },
+                      "LAYERED_METADATA": {
+                        "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type generated dependency set_width format long minimum {} maximum {}} value 8} stride {attribs {resolve_type generated dependency set_stride format long minimum {} maximum {}} value 8} real {fixed {fractwidth {attribs {resolve_type generated dependency set_fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 16 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_a_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value a_tuser} enabled {attribs {resolve_type generated dependency a_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency a_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_b_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value b_tuser} enabled {attribs {resolve_type generated dependency b_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency b_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency b_offset format long minimum {} maximum {}} value 0}}} field_ctrl_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value ctrl_tuser} enabled {attribs {resolve_type generated dependency ctrl_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency ctrl_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency ctrl_offset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "TDATA_NUM_BYTES": {
+                        "value": "2",
+                        "value_src": "auto_prop"
+                      },
+                      "TDEST_WIDTH": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "TID_WIDTH": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "TUSER_WIDTH": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      }
+                    }
+                  }
+                },
+                "ports": {
+                  "aclk_0": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "ASSOCIATED_BUSIF": {
+                        "value": "M_AXIS_DOUT_0",
+                        "value_src": "strong"
+                      },
+                      "ASSOCIATED_RESET": {
+                        "value": "aresetn",
+                        "value_src": "strong"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "125000000",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_TOLERANCE_HZ": {
+                        "value": "0",
+                        "value_src": "strong"
+                      },
+                      "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "strong"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "resync": {
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0",
+                    "parameters": {
+                      "PortType": {
+                        "value": "undef",
+                        "value_src": "ip_prop"
+                      },
+                      "PortType.PROP_SRC": {
+                        "value": "false",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "aresetn": {
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0",
+                    "parameters": {
+                      "PortType": {
+                        "value": "undef",
+                        "value_src": "ip_prop"
+                      },
+                      "PortType.PROP_SRC": {
+                        "value": "false",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "freq": {
+                    "direction": "I",
+                    "left": "47",
+                    "right": "0"
+                  },
+                  "phase": {
+                    "direction": "I",
+                    "left": "47",
+                    "right": "0"
+                  },
+                  "amplitude": {
+                    "direction": "I",
+                    "left": "15",
+                    "right": "0"
+                  }
+                },
+                "post_compiled_compname": "new_waveform_gen_inst_0",
+                "architecture": "zynq",
+                "variant_info": {
+                  "new_waveform_gen.bd": {
+                    "scoped_diagram": "new_waveform_gen_inst_0.bd",
+                    "design_checksum": "0x94D4DE32",
+                    "ref_name": "new_waveform_gen",
+                    "ref_subinst_path": "systemnew_waveform_gen_1",
+                    "ref_type": "Block Design",
+                    "source_type": "all",
+                    "active": "all"
+                  }
+                }
+              },
+              "new_waveform_gen_1": {
+                "parameters": {
+                  "ACTIVE_SIM_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "ACTIVE_SYNTH_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "ENABLE_DFX": {
+                    "value": "0"
+                  },
+                  "LIST_SIM_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "LIST_SYNTH_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "LOCK_PROPAGATE": {
+                    "value": "0"
+                  }
+                },
+                "interface_ports": {
+                  "M_AXIS_DOUT_0": {
+                    "mode": "Master",
+                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                    "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                    "parameters": {
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "125000000",
+                        "value_src": "ip_prop"
+                      },
+                      "HAS_TKEEP": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "HAS_TLAST": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      },
+                      "HAS_TREADY": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      },
+                      "HAS_TSTRB": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "default"
+                      },
+                      "LAYERED_METADATA": {
+                        "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type generated dependency set_width format long minimum {} maximum {}} value 8} stride {attribs {resolve_type generated dependency set_stride format long minimum {} maximum {}} value 8} real {fixed {fractwidth {attribs {resolve_type generated dependency set_fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 16 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_a_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value a_tuser} enabled {attribs {resolve_type generated dependency a_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency a_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_b_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value b_tuser} enabled {attribs {resolve_type generated dependency b_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency b_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency b_offset format long minimum {} maximum {}} value 0}}} field_ctrl_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value ctrl_tuser} enabled {attribs {resolve_type generated dependency ctrl_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency ctrl_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency ctrl_offset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "TDATA_NUM_BYTES": {
+                        "value": "2",
+                        "value_src": "auto_prop"
+                      },
+                      "TDEST_WIDTH": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "TID_WIDTH": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "TUSER_WIDTH": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      }
+                    }
+                  }
+                },
+                "ports": {
+                  "aclk_0": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "ASSOCIATED_BUSIF": {
+                        "value": "M_AXIS_DOUT_0",
+                        "value_src": "strong"
+                      },
+                      "ASSOCIATED_RESET": {
+                        "value": "aresetn",
+                        "value_src": "strong"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "125000000",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_TOLERANCE_HZ": {
+                        "value": "0",
+                        "value_src": "strong"
+                      },
+                      "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "strong"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "resync": {
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0",
+                    "parameters": {
+                      "PortType": {
+                        "value": "undef",
+                        "value_src": "ip_prop"
+                      },
+                      "PortType.PROP_SRC": {
+                        "value": "false",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "aresetn": {
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0",
+                    "parameters": {
+                      "PortType": {
+                        "value": "undef",
+                        "value_src": "ip_prop"
+                      },
+                      "PortType.PROP_SRC": {
+                        "value": "false",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "freq": {
+                    "direction": "I",
+                    "left": "47",
+                    "right": "0"
+                  },
+                  "phase": {
+                    "direction": "I",
+                    "left": "47",
+                    "right": "0"
+                  },
+                  "amplitude": {
+                    "direction": "I",
+                    "left": "15",
+                    "right": "0"
+                  }
+                },
+                "post_compiled_compname": "new_waveform_gen_inst_1",
+                "architecture": "zynq",
+                "variant_info": {
+                  "new_waveform_gen.bd": {
+                    "scoped_diagram": "new_waveform_gen_inst_1.bd",
+                    "design_checksum": "0x94D4DE32",
+                    "ref_name": "new_waveform_gen",
+                    "ref_subinst_path": "systemnew_waveform_gen_4",
+                    "ref_type": "Block Design",
+                    "source_type": "all",
+                    "active": "all"
+                  }
+                }
+              },
+              "new_waveform_gen_2": {
+                "parameters": {
+                  "ACTIVE_SIM_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "ACTIVE_SYNTH_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "ENABLE_DFX": {
+                    "value": "0"
+                  },
+                  "LIST_SIM_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "LIST_SYNTH_BD": {
+                    "value": "new_waveform_gen.bd"
+                  },
+                  "LOCK_PROPAGATE": {
+                    "value": "0"
+                  }
+                },
+                "interface_ports": {
+                  "M_AXIS_DOUT_0": {
+                    "mode": "Master",
+                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                    "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                    "parameters": {
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "125000000",
+                        "value_src": "ip_prop"
+                      },
+                      "HAS_TKEEP": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "HAS_TLAST": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      },
+                      "HAS_TREADY": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      },
+                      "HAS_TSTRB": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "default"
+                      },
+                      "LAYERED_METADATA": {
+                        "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type generated dependency set_width format long minimum {} maximum {}} value 8} stride {attribs {resolve_type generated dependency set_stride format long minimum {} maximum {}} value 8} real {fixed {fractwidth {attribs {resolve_type generated dependency set_fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 16 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_a_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value a_tuser} enabled {attribs {resolve_type generated dependency a_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency a_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_b_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value b_tuser} enabled {attribs {resolve_type generated dependency b_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency b_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency b_offset format long minimum {} maximum {}} value 0}}} field_ctrl_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value ctrl_tuser} enabled {attribs {resolve_type generated dependency ctrl_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency ctrl_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency ctrl_offset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "TDATA_NUM_BYTES": {
+                        "value": "2",
+                        "value_src": "auto_prop"
+                      },
+                      "TDEST_WIDTH": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "TID_WIDTH": {
+                        "value": "0",
+                        "value_src": "const_prop"
+                      },
+                      "TUSER_WIDTH": {
+                        "value": "0",
+                        "value_src": "auto_prop"
+                      }
+                    }
+                  }
+                },
+                "ports": {
+                  "aclk_0": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "ASSOCIATED_BUSIF": {
+                        "value": "M_AXIS_DOUT_0",
+                        "value_src": "strong"
+                      },
+                      "ASSOCIATED_RESET": {
+                        "value": "aresetn",
+                        "value_src": "strong"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "125000000",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_TOLERANCE_HZ": {
+                        "value": "0",
+                        "value_src": "strong"
+                      },
+                      "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "strong"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "resync": {
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0",
+                    "parameters": {
+                      "PortType": {
+                        "value": "undef",
+                        "value_src": "ip_prop"
+                      },
+                      "PortType.PROP_SRC": {
+                        "value": "false",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "aresetn": {
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0",
+                    "parameters": {
+                      "PortType": {
+                        "value": "undef",
+                        "value_src": "ip_prop"
+                      },
+                      "PortType.PROP_SRC": {
+                        "value": "false",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "freq": {
+                    "direction": "I",
+                    "left": "47",
+                    "right": "0"
+                  },
+                  "phase": {
+                    "direction": "I",
+                    "left": "47",
+                    "right": "0"
+                  },
+                  "amplitude": {
+                    "direction": "I",
+                    "left": "15",
+                    "right": "0"
+                  }
+                },
+                "post_compiled_compname": "new_waveform_gen_inst_5",
+                "architecture": "zynq",
+                "variant_info": {
+                  "new_waveform_gen.bd": {
+                    "scoped_diagram": "new_waveform_gen_inst_5.bd",
+                    "design_checksum": "0x94D4DE32",
+                    "ref_name": "new_waveform_gen",
+                    "ref_subinst_path": "systemnew_waveform_gen_5",
+                    "ref_type": "Block Design",
+                    "source_type": "all",
+                    "active": "all"
+                  }
+                }
               }
             },
             "interface_nets": {
@@ -5022,9 +5145,9 @@
                   "signal_composer_0/clk",
                   "signal_ramp/aclk",
                   "waveform_awg/aclk",
-                  "waveform_gen_0/aclk",
-                  "waveform_gen_1/aclk",
-                  "waveform_gen_2/aclk"
+                  "new_waveform_gen_0/aclk_0",
+                  "new_waveform_gen_1/aclk_0",
+                  "new_waveform_gen_2/aclk_0"
                 ]
               },
               "aresetn_1": {
@@ -5032,9 +5155,9 @@
                   "aresetn",
                   "signal_ramp/aresetn",
                   "waveform_awg/aresetn",
-                  "waveform_gen_0/aresetn",
-                  "waveform_gen_1/aresetn",
-                  "waveform_gen_2/aresetn"
+                  "new_waveform_gen_0/aresetn",
+                  "new_waveform_gen_1/aresetn",
+                  "new_waveform_gen_2/aresetn"
                 ]
               },
               "bram_aresetn_1": {
@@ -5047,6 +5170,42 @@
                 "ports": [
                   "disable_dac",
                   "signal_composer_0/disable_dac"
+                ]
+              },
+              "new_waveform_gen_0_M_AXIS_DOUT_0_tdata": {
+                "ports": [
+                  "new_waveform_gen_0/M_AXIS_DOUT_0_tdata",
+                  "signal_composer_0/wave0"
+                ]
+              },
+              "new_waveform_gen_0_M_AXIS_DOUT_0_tvalid": {
+                "ports": [
+                  "new_waveform_gen_0/M_AXIS_DOUT_0_tvalid",
+                  "signal_composer_0/valid0"
+                ]
+              },
+              "new_waveform_gen_1_M_AXIS_DOUT_0_tdata": {
+                "ports": [
+                  "new_waveform_gen_1/M_AXIS_DOUT_0_tdata",
+                  "signal_composer_0/wave1"
+                ]
+              },
+              "new_waveform_gen_1_M_AXIS_DOUT_0_tvalid": {
+                "ports": [
+                  "new_waveform_gen_1/M_AXIS_DOUT_0_tvalid",
+                  "signal_composer_0/valid1"
+                ]
+              },
+              "new_waveform_gen_2_M_AXIS_DOUT_0_tdata": {
+                "ports": [
+                  "new_waveform_gen_2/M_AXIS_DOUT_0_tdata",
+                  "signal_composer_0/wave2"
+                ]
+              },
+              "new_waveform_gen_2_M_AXIS_DOUT_0_tvalid": {
+                "ports": [
+                  "new_waveform_gen_2/M_AXIS_DOUT_0_tvalid",
+                  "signal_composer_0/valid2"
                 ]
               },
               "offset_1": {
@@ -5064,9 +5223,9 @@
               "resync_dac_1": {
                 "ports": [
                   "resync_dac",
-                  "waveform_gen_0/resync",
-                  "waveform_gen_1/resync",
-                  "waveform_gen_2/resync"
+                  "new_waveform_gen_0/resync",
+                  "new_waveform_gen_1/resync",
+                  "new_waveform_gen_2/resync"
                 ]
               },
               "signal_calib_0_signal_out": {
@@ -5101,73 +5260,55 @@
               "signal_cfg_slice_0_comp_0_amp": {
                 "ports": [
                   "signal_cfg_slice_0/comp_0_amp",
-                  "waveform_gen_0/amplitude"
-                ]
-              },
-              "signal_cfg_slice_0_comp_0_cfg": {
-                "ports": [
-                  "signal_cfg_slice_0/comp_0_cfg",
-                  "waveform_gen_0/cfg_data"
+                  "new_waveform_gen_0/amplitude"
                 ]
               },
               "signal_cfg_slice_0_comp_0_freq": {
                 "ports": [
                   "signal_cfg_slice_0/comp_0_freq",
-                  "waveform_gen_0/freq"
+                  "new_waveform_gen_0/freq"
                 ]
               },
               "signal_cfg_slice_0_comp_0_phase": {
                 "ports": [
                   "signal_cfg_slice_0/comp_0_phase",
-                  "waveform_gen_0/phase"
+                  "new_waveform_gen_0/phase"
                 ]
               },
               "signal_cfg_slice_0_comp_1_amp": {
                 "ports": [
                   "signal_cfg_slice_0/comp_1_amp",
-                  "waveform_gen_1/amplitude"
-                ]
-              },
-              "signal_cfg_slice_0_comp_1_cfg": {
-                "ports": [
-                  "signal_cfg_slice_0/comp_1_cfg",
-                  "waveform_gen_1/cfg_data"
+                  "new_waveform_gen_1/amplitude"
                 ]
               },
               "signal_cfg_slice_0_comp_1_freq": {
                 "ports": [
                   "signal_cfg_slice_0/comp_1_freq",
-                  "waveform_gen_1/freq"
+                  "new_waveform_gen_1/freq"
                 ]
               },
               "signal_cfg_slice_0_comp_1_phase": {
                 "ports": [
                   "signal_cfg_slice_0/comp_1_phase",
-                  "waveform_gen_1/phase"
+                  "new_waveform_gen_1/phase"
                 ]
               },
               "signal_cfg_slice_0_comp_2_amp": {
                 "ports": [
                   "signal_cfg_slice_0/comp_2_amp",
-                  "waveform_gen_2/amplitude"
-                ]
-              },
-              "signal_cfg_slice_0_comp_2_cfg": {
-                "ports": [
-                  "signal_cfg_slice_0/comp_2_cfg",
-                  "waveform_gen_2/cfg_data"
+                  "new_waveform_gen_2/amplitude"
                 ]
               },
               "signal_cfg_slice_0_comp_2_freq": {
                 "ports": [
                   "signal_cfg_slice_0/comp_2_freq",
-                  "waveform_gen_2/freq"
+                  "new_waveform_gen_2/freq"
                 ]
               },
               "signal_cfg_slice_0_comp_2_phase": {
                 "ports": [
                   "signal_cfg_slice_0/comp_2_phase",
-                  "waveform_gen_2/phase"
+                  "new_waveform_gen_2/phase"
                 ]
               },
               "signal_cfg_slice_0_comp_3_freq": {
@@ -5228,42 +5369,6 @@
                 "ports": [
                   "waveform_awg/S",
                   "signal_composer_0/wave3"
-                ]
-              },
-              "waveform_gen_0_m_axis_data_tvalid_1": {
-                "ports": [
-                  "waveform_gen_0/m_axis_data_tvalid_1",
-                  "signal_composer_0/valid0"
-                ]
-              },
-              "waveform_gen_0_wave": {
-                "ports": [
-                  "waveform_gen_0/wave",
-                  "signal_composer_0/wave0"
-                ]
-              },
-              "waveform_gen_1_m_axis_data_tvalid_1": {
-                "ports": [
-                  "waveform_gen_1/m_axis_data_tvalid_1",
-                  "signal_composer_0/valid1"
-                ]
-              },
-              "waveform_gen_1_wave": {
-                "ports": [
-                  "waveform_gen_1/wave",
-                  "signal_composer_0/wave1"
-                ]
-              },
-              "waveform_gen_2_m_axis_data_tvalid_1": {
-                "ports": [
-                  "waveform_gen_2/m_axis_data_tvalid_1",
-                  "signal_composer_0/valid2"
-                ]
-              },
-              "waveform_gen_2_wave": {
-                "ports": [
-                  "waveform_gen_2/wave",
-                  "signal_composer_0/wave2"
                 ]
               },
               "xlconstant_0_dout": {
@@ -5750,7 +5855,7 @@
                       },
                       "POLARITY": {
                         "value": "ACTIVE_LOW",
-                        "value_src": "default_prop"
+                        "value_src": "strong"
                       }
                     }
                   },
@@ -6382,14 +6487,6 @@
                     "left": "0",
                     "right": "0",
                     "parameters": {
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "POLARITY": {
-                        "value": "ACTIVE_LOW",
-                        "value_src": "strong"
-                      },
                       "PortType": {
                         "value": "undef",
                         "value_src": "ip_prop"
@@ -6421,7 +6518,7 @@
                 "variant_info": {
                   "new_waveform_gen.bd": {
                     "scoped_diagram": "new_waveform_gen_inst_2.bd",
-                    "design_checksum": "0xC70E28CA",
+                    "design_checksum": "0x94D4DE32",
                     "ref_name": "new_waveform_gen",
                     "ref_subinst_path": "systemnew_waveform_gen_2",
                     "ref_type": "Block Design",
@@ -6521,10 +6618,6 @@
                         "value": "M_AXIS_DOUT_0",
                         "value_src": "strong"
                       },
-                      "ASSOCIATED_CLKEN": {
-                        "value": "aclken",
-                        "value_src": "strong"
-                      },
                       "ASSOCIATED_RESET": {
                         "value": "aresetn",
                         "value_src": "strong"
@@ -6571,14 +6664,6 @@
                     "left": "0",
                     "right": "0",
                     "parameters": {
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "POLARITY": {
-                        "value": "ACTIVE_LOW",
-                        "value_src": "strong"
-                      },
                       "PortType": {
                         "value": "undef",
                         "value_src": "ip_prop"
@@ -6610,7 +6695,7 @@
                 "variant_info": {
                   "new_waveform_gen.bd": {
                     "scoped_diagram": "new_waveform_gen_inst_3.bd",
-                    "design_checksum": "0xC70E28CA",
+                    "design_checksum": "0x94D4DE32",
                     "ref_name": "new_waveform_gen",
                     "ref_subinst_path": "systemnew_waveform_gen_3",
                     "ref_type": "Block Design",
@@ -6710,10 +6795,6 @@
                         "value": "M_AXIS_DOUT_0",
                         "value_src": "strong"
                       },
-                      "ASSOCIATED_CLKEN": {
-                        "value": "aclken",
-                        "value_src": "strong"
-                      },
                       "ASSOCIATED_RESET": {
                         "value": "aresetn",
                         "value_src": "strong"
@@ -6760,14 +6841,6 @@
                     "left": "0",
                     "right": "0",
                     "parameters": {
-                      "INSERT_VIP": {
-                        "value": "0",
-                        "value_src": "strong"
-                      },
-                      "POLARITY": {
-                        "value": "ACTIVE_LOW",
-                        "value_src": "strong"
-                      },
                       "PortType": {
                         "value": "undef",
                         "value_src": "ip_prop"
@@ -6799,7 +6872,7 @@
                 "variant_info": {
                   "new_waveform_gen.bd": {
                     "scoped_diagram": "new_waveform_gen_inst_4.bd",
-                    "design_checksum": "0xC70E28CA",
+                    "design_checksum": "0x94D4DE32",
                     "ref_name": "new_waveform_gen",
                     "ref_subinst_path": "system_new_waveform_gen_0",
                     "ref_type": "Block Design",
@@ -13971,17 +14044,17 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/sequencer/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0x80000000",
-                "range": "128K"
+                "range": "16K"
               },
               "SEG_axi_bram_ctrl_0_Mem0_1": {
                 "address_block": "/fourier_synth_standard/signal_compose1/waveform_awg1/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0x80028000",
-                "range": "32K"
+                "range": "16K"
               },
               "SEG_axi_bram_ctrl_0_Mem0_2": {
                 "address_block": "/fourier_synth_standard/signal_compose/waveform_awg/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0x80020000",
-                "range": "32K"
+                "range": "16K"
               },
               "SEG_axi_cfg_register_cfg_reg0": {
                 "address_block": "/system/axi_cfg_register_cfg/s_axi/reg0",
@@ -14031,7 +14104,7 @@
               "SEG_xadc_wiz_0_Reg": {
                 "address_block": "/xadc_wiz_0/s_axi_lite/Reg",
                 "offset": "0x40010000",
-                "range": "64K"
+                "range": "32K"
               }
             }
           }

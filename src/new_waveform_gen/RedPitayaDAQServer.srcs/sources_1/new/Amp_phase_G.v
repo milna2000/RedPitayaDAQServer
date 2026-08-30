@@ -1,94 +1,68 @@
 module Amp_phase_G #(
-    parameter integer ADDR_WIDTH = 14   // address width is 14; remaining 2 MSBs select quadrant
+    parameter CORDIC_LATENCY = 20   // <<< REPLACE with the exact latency
+                                     //     reported in your CORDIC IP's
+                                     //     customization GUI (Step 1)
 )(
     input  wire        clk,
     input  wire        aresetn,
-    input  wire [15:0] phase,           // unsigned, angle = phase * 2*pi / 65536
-    input  wire [15:0] amplitude,       // unsigned
-    output reg  [31:0] G                // G[15:0]  = Gr (Q1.15, A * cos(phase))
-                                        // G[31:16] = Gi (Q1.15, A * sin(phase))
+    input  wire [15:0] phase,
+    input  wire [15:0] amplitude,
+    output reg  [31:0] G
 );
+    wire        cordic_valid;
+    wire [31:0] cordic_data;
 
-    localparam integer DEPTH = (1 << ADDR_WIDTH);
-    localparam integer QUARTER_TURN = (1 << ADDR_WIDTH); // 0x4000 for ADDR_WIDTH=14
+    
+  cordic_0 cordic_i (
+      .aclk(clk),                                // input wire aclk
+      .s_axis_phase_tvalid(1'b1),  // input wire s_axis_phase_tvalid
+      .s_axis_phase_tdata(phase),    // input wire [15 : 0] s_axis_phase_tdata
+      .m_axis_dout_tvalid(cordic_valid),    // output wire m_axis_dout_tvalid
+      .m_axis_dout_tdata(cordic_data)      // output wire [31 : 0] m_axis_dout_tdata
+   );
 
-    (* rom_style = "block" *)
-    reg signed [15:0] sine_rom [0:DEPTH-1];
-    integer k;
+    // Extract cosine/sine -- VERIFY this packing against your actual
+    // CORDIC instantiation template / PG105, this is currently assumed.
+    wire signed [15:0] cordic_cos = cordic_data[15:0];
+    wire signed [15:0] cordic_sin = cordic_data[31:16];
 
-    initial begin
-        for (k = 0; k < DEPTH; k = k + 1) begin
-            sine_rom[k] = $rtoi(32767.0 * $sin((k * 3.14159265358979323846) / (2.0 * DEPTH)));
-        end
-    end
-
-    function signed [15:0] lookup_sin;
-        input [15:0] ph;
-        reg [ADDR_WIDTH-1:0] idx, idx_mirror;
-        reg signed [15:0] mag;
-        begin
-            idx        = ph[ADDR_WIDTH-1:0];
-            idx_mirror = ~idx; // (2^ADDR_WIDTH - 1) - idx
-            case (ph[15:14])
-                2'b00: mag =  sine_rom[idx];
-                2'b01: mag =  sine_rom[idx_mirror];
-                2'b10: mag = -sine_rom[idx];
-                2'b11: mag = -sine_rom[idx_mirror];
-                default: mag = 16'sd0;
-            endcase
-            lookup_sin = mag;
-        end
-    endfunction
-
-    // -------------------------------------------------------------------
-    // Stage 1: Obtain sin and cos via lookup & pipeline amplitude
-    // -------------------------------------------------------------------
-    reg [15:0] amplitude_s1;
-    reg signed [15:0] cos_s1, sin_s1;
+    //-------------------------------------------------------------------
+    // Delay amplitude by CORDIC_LATENCY cycles so it lines up with the
+    // phase value it was originally paired with when the result returns.
+    //-------------------------------------------------------------------
+    reg [15:0] amp_delay [0:CORDIC_LATENCY-1];
+    integer d;
 
     always @(posedge clk) begin
-        if (~aresetn) begin
-            amplitude_s1 <= 16'd0;
-            cos_s1       <= 16'sd0;
-            sin_s1       <= 16'sd0;
+        if (!aresetn) begin
+            for (d = 0; d < CORDIC_LATENCY; d = d + 1)
+                amp_delay[d] <= 16'd0;
         end else begin
-            amplitude_s1 <= amplitude;
-            cos_s1       <= lookup_sin(phase + QUARTER_TURN[15:0]);
-            sin_s1       <= lookup_sin(phase);
+            amp_delay[0] <= amplitude;
+            for (d = 1; d < CORDIC_LATENCY; d = d + 1)
+                amp_delay[d] <= amp_delay[d-1];
         end
     end
 
-    // -------------------------------------------------------------------
-    // Stage 2: Multiply by amplitude (Forced LUT-based multiplication)
-    // -------------------------------------------------------------------
-    reg signed [32:0] prod_gr_s2, prod_gi_s2;
+    wire [15:0] amp_aligned = amp_delay[CORDIC_LATENCY-1];
 
-    // (* use_dsp = "no" *) forces Vivado to synthesize multipliers in LUT logic
-    wire signed [32:0] mult_gr_wire = $signed({1'b0, amplitude_s1}) * cos_s1;
-    wire signed [32:0] mult_gi_wire = $signed({1'b0, amplitude_s1}) * sin_s1;
+    //-------------------------------------------------------------------
+    // Multiply CORDIC's unit-magnitude cos/sin by the aligned amplitude,
+    // round to nearest, register into G.
+    //-------------------------------------------------------------------
+    wire signed [31:0] gr_mult = cordic_cos * $signed({1'b0, amp_aligned});
+    wire signed [31:0] gi_mult = cordic_sin * $signed({1'b0, amp_aligned});
 
-    always @(posedge clk) begin
-        if (~aresetn) begin
-            prod_gr_s2 <= 33'sd0;
-            prod_gi_s2 <= 33'sd0;
-        end else begin
-            prod_gr_s2 <= mult_gr_wire;
-            prod_gi_s2 <= mult_gi_wire;
-        end
-    end
-
-    // -------------------------------------------------------------------
-    // Stage 3: Round and rescale back to Q1.15, drive output G
-    // -------------------------------------------------------------------
-    wire signed [15:0] gr_rounded = (prod_gr_s2 + 33'sd32768) >>> 16;
-    wire signed [15:0] gi_rounded = (prod_gi_s2 + 33'sd32768) >>> 16;
+    wire signed [31:0] gr_rounded = gr_mult + 32'sd32768;
+    wire signed [31:0] gi_rounded = gi_mult + 32'sd32768;
 
     always @(posedge clk) begin
-        if (~aresetn) begin
+        if (!aresetn) begin
             G <= 32'd0;
-        end else begin
-            G <= {gi_rounded, gr_rounded}; // [31:16]=Gi, [15:0]=Gr
+        end else if (cordic_valid) begin
+            G <= {gr_rounded[31 -: 16], gi_rounded[31 -: 16]};
         end
+        // else: hold last value if cordic_valid deasserts for a cycle
     end
 
 endmodule

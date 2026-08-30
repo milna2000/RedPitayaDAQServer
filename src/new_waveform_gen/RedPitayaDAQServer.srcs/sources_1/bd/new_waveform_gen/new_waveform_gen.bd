@@ -17,7 +17,7 @@
       "util_vector_logic_1": "",
       "cmpy_0": "",
       "xlslice_0": "",
-      "axis_variable_A_channel_2": "",
+      "axis_variable_0": "",
       "Amp_phase_G_0": ""
     },
     "interface_ports": {
@@ -218,10 +218,10 @@
             "value": "Not_Required"
           },
           "Memory_Type": {
-            "value": "Auto"
+            "value": "Block_ROM"
           },
           "Noise_Shaping": {
-            "value": "None"
+            "value": "Auto"
           },
           "Optimization_Goal": {
             "value": "Auto"
@@ -242,7 +242,7 @@
             "value": "0"
           },
           "Parameter_Entry": {
-            "value": "Hardware_Parameters"
+            "value": "System_Parameters"
           },
           "PartsPresent": {
             "value": "Phase_Generator_and_SIN_COS_LUT"
@@ -341,16 +341,11 @@
           }
         }
       },
-      "axis_variable_A_channel_2": {
+      "axis_variable_0": {
         "vlnv": "pavel-demin:user:axis_variable:1.0",
-        "xci_name": "new_waveform_gen_axis_variable_A_channel_1_1",
-        "xci_path": "ip\\new_waveform_gen_axis_variable_A_channel_1_1\\new_waveform_gen_axis_variable_A_channel_1_1.xci",
-        "inst_hier_path": "axis_variable_A_channel_2",
-        "parameters": {
-          "AXIS_TDATA_WIDTH": {
-            "value": "32"
-          }
-        }
+        "xci_name": "new_waveform_gen_axis_variable_0_1",
+        "xci_path": "ip\\new_waveform_gen_axis_variable_0_1\\new_waveform_gen_axis_variable_0_1.xci",
+        "inst_hier_path": "axis_variable_0"
       },
       "Amp_phase_G_0": {
         "vlnv": "xilinx.com:module_ref:Amp_phase_G:1.0",
@@ -410,16 +405,16 @@
       }
     },
     "interface_nets": {
+      "axis_variable_0_M_AXIS": {
+        "interface_ports": [
+          "axis_variable_0/M_AXIS",
+          "cmpy_0/S_AXIS_B"
+        ]
+      },
       "axis_variable_A_channel_1_M_AXIS": {
         "interface_ports": [
           "axis_variable_A_channel_1/M_AXIS",
           "dds_compiler_A_channel_1/S_AXIS_CONFIG"
-        ]
-      },
-      "axis_variable_A_channel_2_M_AXIS": {
-        "interface_ports": [
-          "axis_variable_A_channel_2/M_AXIS",
-          "cmpy_0/S_AXIS_B"
         ]
       },
       "cmpy_0_M_AXIS_DOUT": {
@@ -439,7 +434,7 @@
       "Amp_phase_G_0_G": {
         "ports": [
           "Amp_phase_G_0/G",
-          "axis_variable_A_channel_2/cfg_data"
+          "axis_variable_0/cfg_data"
         ]
       },
       "Op1_0_1": {
@@ -453,7 +448,7 @@
           "aresetn",
           "util_vector_logic_1/Op2",
           "axis_variable_A_channel_1/aresetn",
-          "axis_variable_A_channel_2/aresetn",
+          "axis_variable_0/aresetn",
           "Amp_phase_G_0/aresetn"
         ]
       },
@@ -462,12 +457,12 @@
           "aclk_0",
           "axis_variable_A_channel_1/aclk",
           "dds_compiler_A_channel_1/aclk",
-          "axis_variable_A_channel_2/aclk",
           "cmpy_0/aclk",
+          "axis_variable_0/aclk",
           "Amp_phase_G_0/clk"
         ]
       },
-      "amplitude_0_1": {
+      "amplitude_1": {
         "ports": [
           "amplitude",
           "Amp_phase_G_0/amplitude"
