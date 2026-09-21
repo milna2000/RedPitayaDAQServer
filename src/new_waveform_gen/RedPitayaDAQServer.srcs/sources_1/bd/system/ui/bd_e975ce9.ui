@@ -1,0 +1,78 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.56714",
+   "Default View_TopLeft":"92,11",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port m_axi -pg 1 -lvl 11 -x 3190 -y 640 -defaultsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace port port-id_enableFIR -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
+preplace port port-id_keep_alive_aresetn -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace port port-id_s_axis_data_tvalid -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace portBus Din -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace portBus adc_out_A -pg 1 -lvl 11 -x 3190 -y 430 -defaultsOSRD
+preplace portBus adc_out_B -pg 1 -lvl 11 -x 3190 -y 530 -defaultsOSRD
+preplace portBus decimation -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace portBus sts_data -pg 1 -lvl 11 -x 3190 -y 680 -defaultsOSRD
+preplace inst axis_dwidth_converter_0 -pg 1 -lvl 9 -x 2700 -y 630 -defaultsOSRD
+preplace inst axis_ram_writer_1 -pg 1 -lvl 10 -x 3020 -y 660 -defaultsOSRD
+preplace inst axis_variable_decimation_A -pg 1 -lvl 2 -x 380 -y 280 -defaultsOSRD
+preplace inst axis_variable_decimation_B -pg 1 -lvl 2 -x 380 -y 500 -defaultsOSRD
+preplace inst bypass_multiplexer_0 -pg 1 -lvl 8 -x 2360 -y 400 -defaultsOSRD
+preplace inst bypass_multiplexer_1 -pg 1 -lvl 8 -x 2360 -y 610 -defaultsOSRD
+preplace inst cic_compiler_A -pg 1 -lvl 3 -x 750 -y 270 -defaultsOSRD
+preplace inst cic_compiler_B -pg 1 -lvl 3 -x 750 -y 490 -defaultsOSRD
+preplace inst fir_compiler_1 -pg 1 -lvl 5 -x 1520 -y 550 -defaultsOSRD
+preplace inst sign_extend_A -pg 1 -lvl 2 -x 380 -y 50 -defaultsOSRD
+preplace inst sign_extend_B -pg 1 -lvl 2 -x 380 -y 170 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 4 -x 1130 -y 500 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 9 -x 2700 -y 200 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 4 -x 1130 -y 280 -defaultsOSRD
+preplace inst xlconcat_3 -pg 1 -lvl 7 -x 2060 -y 360 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 9 -x 2700 -y 800 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 6 -x 1840 -y 270 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 6 -x 1840 -y 370 -defaultsOSRD
+preplace inst xlslice_A -pg 1 -lvl 1 -x 130 -y 50 -defaultsOSRD
+preplace inst xlslice_B -pg 1 -lvl 1 -x 130 -y 170 -defaultsOSRD
+preplace inst xlslice_out_A -pg 1 -lvl 10 -x 3020 -y 430 -defaultsOSRD
+preplace inst xlslice_out_B -pg 1 -lvl 10 -x 3020 -y 530 -defaultsOSRD
+preplace netloc In0_1 1 1 1 NJ 50
+preplace netloc aresetn3_1 1 0 9 NJ 110 NJ 110 NJ 110 NJ 110 NJ 110 NJ 110 NJ 110 NJ 110 2530J
+preplace netloc axis_ram_writer_1_sts_total_data 1 10 1 NJ 680
+preplace netloc axis_red_pitaya_adc_1_m_axis_tdata 1 0 1 20 50n
+preplace netloc axis_red_pitaya_adc_1_m_axis_tvalid 1 0 3 NJ 590 NJ 590 500
+preplace netloc bypass_multiplexer_1_outsignal 1 8 1 N 610
+preplace netloc cic_compiler_A_m_axis_data_tdata 1 3 1 N 270
+preplace netloc cic_compiler_A_m_axis_data_tvalid 1 3 1 950 290n
+preplace netloc cic_compiler_B_m_axis_data_tdata 1 3 1 960 290n
+preplace netloc cic_compiler_B_m_axis_data_tvalid 1 3 1 N 510
+preplace netloc clk_wiz_0_clk_internal 1 0 10 NJ 260 250 360 520 380 NJ 380 1280 200 NJ 200 NJ 200 2170 510 2500 730 2860J
+preplace netloc decimation_1 1 0 2 NJ 300 230
+preplace netloc enableFIR_1 1 0 8 NJ 650 NJ 650 NJ 650 970J 430 NJ 430 NJ 430 NJ 430 2190
+preplace netloc fir_compiler_1_m_axis_data_tdata 1 5 1 1720 270n
+preplace netloc fir_compiler_1_m_axis_data_tvalid 1 5 3 N 570 NJ 570 NJ
+preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 0 9 NJ 280 240 370 530 600 NJ 600 1290 440 NJ 440 NJ 440 2180 500 2520
+preplace netloc sign_extend_A_dout 1 2 1 530J 50n
+preplace netloc sign_extend_B_dout 1 2 1 510J 170n
+preplace netloc util_vector_logic_0_Res 1 4 4 1310 450 NJ 450 NJ 450 2160
+preplace netloc util_vector_logic_1_Res 1 9 1 2850 200n
+preplace netloc xlconcat_1_dout 1 4 4 1300 210 NJ 210 NJ 210 2190
+preplace netloc xlconcat_3_dout 1 8 2 2510 430 2860
+preplace netloc xlconcat_3_dout1 1 7 1 N 360
+preplace netloc xlconstant_2_dout 1 9 1 2870J 690n
+preplace netloc xlslice_0_Dout 1 6 1 1940J 270n
+preplace netloc xlslice_1_Dout 1 6 1 NJ 370
+preplace netloc xlslice_B_Dout 1 1 1 NJ 170
+preplace netloc xlslice_out_A_Dout 1 10 1 NJ 430
+preplace netloc xlslice_out_B_Dout 1 10 1 NJ 530
+preplace netloc axis_dwidth_converter_0_M_AXIS 1 9 1 N 630
+preplace netloc axis_ram_writer_1_M_AXI 1 10 1 NJ 640
+preplace netloc axis_variable_2_M_AXIS 1 2 1 N 280
+preplace netloc axis_variable_decimation_B_M_AXIS 1 2 1 N 500
+levelinfo -pg 1 0 130 380 750 1130 1520 1840 2060 2360 2700 3020 3190
+pagesize -pg 1 -db -bbox -sgen -180 -10 3350 860
+"
+}
+0

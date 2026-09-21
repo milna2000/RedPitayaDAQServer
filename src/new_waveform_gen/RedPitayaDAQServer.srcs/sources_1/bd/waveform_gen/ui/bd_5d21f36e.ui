@@ -1,0 +1,44 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.670685",
+   "Default View_TopLeft":"-149,-166",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
+preplace port port-id_m_axis_data_tvalid_1 -pg 1 -lvl 5 -x 1200 -y 20 -defaultsOSRD
+preplace port port-id_resync -pg 1 -lvl 0 -x -10 -y 140 -defaultsOSRD
+preplace portBus amplitude -pg 1 -lvl 0 -x -10 -y 20 -defaultsOSRD
+preplace portBus cfg_data -pg 1 -lvl 0 -x -10 -y 40 -defaultsOSRD
+preplace portBus freq -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
+preplace portBus phase -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
+preplace portBus wave -pg 1 -lvl 5 -x 1200 -y 40 -defaultsOSRD
+preplace inst axis_variable_A_channel_1 -pg 1 -lvl 1 -x 230 -y 80 -defaultsOSRD
+preplace inst dds_compiler_A_channel_1 -pg 1 -lvl 1 -x 230 -y 280 -defaultsOSRD
+preplace inst mult_gen_0 -pg 1 -lvl 1 -x 230 -y 550 -defaultsOSRD
+preplace inst signal_generator_0 -pg 1 -lvl 4 -x 1000 -y 290 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 230 -y 400 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 2 -x 600 -y 280 -defaultsOSRD
+preplace inst xlconcat_A_channel_1 -pg 1 -lvl 2 -x 600 -y 100 -defaultsOSRD
+preplace netloc amplitude_A_channel_1_slice1_Dout 1 0 1 20J 20n
+preplace netloc aresetn_1 1 0 4 60J 190 430 180 760 160 840
+preplace netloc clk_wiz_0_clk_internal 1 0 4 50 0 390J 30 770 500 830
+preplace netloc freq_1 1 0 2 30J -10 430
+preplace netloc mult_gen_0_P 1 1 4 450 420 N 420 NJ 420 1180
+preplace netloc phase_1 1 0 2 30J 160 430
+preplace netloc phase_A_channel_1_slice1_Dout 1 0 4 40J 180 400J 190 780J 180 830
+preplace netloc resync_1 1 0 1 10J 140n
+preplace netloc signal_generator_0_m_axis_tdata 1 0 5 70 470 440 410 780 340 820J 390 1160
+preplace netloc signal_generator_0_m_axis_tvalid 1 4 1 1170 20n
+preplace netloc util_vector_logic_0_Res 1 1 1 420 270n
+preplace netloc util_vector_logic_1_Res 1 0 3 70 460 430 400 750
+preplace netloc xlconcat_A_channel_1_dout 1 0 3 70 170 N 170 750
+preplace netloc axis_variable_A_channel_1_M_AXIS 1 0 2 70 200 390
+preplace netloc dds_compiler_A_channel_1_M_AXIS_DATA 1 1 3 400 200 780 250 N
+preplace netloc dds_compiler_A_channel_1_M_AXIS_PHASE 1 1 3 410 210 750 270 N
+levelinfo -pg 1 -10 230 600 800 1000 1200
+pagesize -pg 1 -db -bbox -sgen -160 -20 1390 630
+"
+}
+0

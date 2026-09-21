@@ -1,74 +1,77 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.607879",
-   "Default View_TopLeft":"-350,0",
+   "Default View_ScaleFactor":"0.663333",
+   "Default View_TopLeft":"-199,0",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port awg_bram -pg 1 -lvl 0 -x -10 -y 1090 -defaultsOSRD
-preplace port port-id_aclk -pg 1 -lvl 0 -x -10 -y 840 -defaultsOSRD
-preplace port port-id_aresetn -pg 1 -lvl 0 -x -10 -y 1110 -defaultsOSRD
-preplace port port-id_bram_aresetn -pg 1 -lvl 0 -x -10 -y 1150 -defaultsOSRD
-preplace port port-id_disable_dac -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
-preplace port port-id_enable_ramping -pg 1 -lvl 0 -x -10 -y 930 -defaultsOSRD
-preplace port port-id_resync_dac -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
-preplace port port-id_start_ramp_down -pg 1 -lvl 0 -x -10 -y 990 -defaultsOSRD
-preplace portBus Din -pg 1 -lvl 0 -x -10 -y 370 -defaultsOSRD
-preplace portBus S -pg 1 -lvl 4 -x 1330 -y 240 -defaultsOSRD
-preplace portBus m_axis_data_tvalid_1 -pg 1 -lvl 4 -x 1330 -y 480 -defaultsOSRD
-preplace portBus offset -pg 1 -lvl 0 -x -10 -y 820 -defaultsOSRD
-preplace portBus ramp_state_1 -pg 1 -lvl 4 -x 1330 -y 930 -defaultsOSRD
-preplace inst signal_calib_0 -pg 1 -lvl 3 -x 1150 -y 240 -defaultsOSRD
-preplace inst signal_cfg_slice_0 -pg 1 -lvl 1 -x 190 -y 370 -defaultsOSRD
-preplace inst signal_composer_0 -pg 1 -lvl 3 -x 1150 -y 490 -defaultsOSRD
-preplace inst signal_ramp_0 -pg 1 -lvl 2 -x 700 -y 940 -defaultsOSRD
-preplace inst waveform_awg1 -pg 1 -lvl 2 -x 700 -y 1140 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 2 -x 700 -y 530 -defaultsOSRD
-preplace inst new_waveform_gen_1 -pg 1 -lvl 2 -x 700 -y 380 -defaultsOSRD
-preplace inst new_waveform_gen_2 -pg 1 -lvl 2 -x 700 -y 710 -defaultsOSRD
-preplace inst new_waveform_gen_0 -pg 1 -lvl 2 -x 700 -y 120 -defaultsOSRD
-preplace netloc Din_1 1 0 1 NJ 370
-preplace netloc amplitude_1 1 1 1 370 170n
-preplace netloc bram_aresetn_1 1 0 2 NJ 1150 NJ
-preplace netloc clk_wiz_0_clk_internal 1 0 3 NJ 840 430 600 910
-preplace netloc disable_dac_1 1 0 3 10J 10 NJ 10 940J
-preplace netloc enable_ramping_1 1 0 2 NJ 930 NJ
-preplace netloc freq_1 1 1 1 360 130n
-preplace netloc new_waveform_gen_0_M_AXIS_DOUT_0_tdata 1 2 1 990 120n
-preplace netloc new_waveform_gen_0_M_AXIS_DOUT_0_tvalid 1 2 1 980 140n
-preplace netloc new_waveform_gen_1_M_AXIS_DOUT_0_tdata 1 2 1 900 380n
-preplace netloc new_waveform_gen_1_M_AXIS_DOUT_0_tvalid 1 2 1 920 400n
-preplace netloc new_waveform_gen_2_M_AXIS_DOUT_0_tdata 1 2 1 950 440n
-preplace netloc new_waveform_gen_2_M_AXIS_DOUT_0_tvalid 1 2 1 980 520n
-preplace netloc offset_1 1 0 3 20J 100 490J 250 930J
-preplace netloc phase_1 1 1 1 390 150n
-preplace netloc resync_dac_1 1 0 2 NJ 90 480
-preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 0 2 NJ 1110 380
-preplace netloc signal_calib_0_signal_out 1 3 1 NJ 240
-preplace netloc signal_cfg_slice_0_calib_limit_lower 1 1 2 N 240 NJ
-preplace netloc signal_cfg_slice_0_calib_limit_upper 1 1 2 N 260 NJ
-preplace netloc signal_cfg_slice_0_calib_offset 1 1 2 470 230 900J
-preplace netloc signal_cfg_slice_0_calib_scale 1 1 1 N 200
-preplace netloc signal_cfg_slice_0_comp_1_amp 1 1 1 450 380n
-preplace netloc signal_cfg_slice_0_comp_1_freq 1 1 1 440 390n
-preplace netloc signal_cfg_slice_0_comp_1_phase 1 1 1 470 410n
-preplace netloc signal_cfg_slice_0_comp_2_amp 1 1 1 400 460n
-preplace netloc signal_cfg_slice_0_comp_2_freq 1 1 1 410 480n
-preplace netloc signal_cfg_slice_0_comp_2_phase 1 1 1 390 500n
-preplace netloc signal_cfg_slice_0_comp_3_freq 1 1 1 370 560n
-preplace netloc signal_cfg_slice_0_comp_3_phase 1 1 1 360 580n
-preplace netloc signal_cfg_slice_0_offset 1 1 2 460 590 970J
-preplace netloc signal_cfg_slice_0_ramp_freq 1 1 1 420 160n
-preplace netloc signal_composer_0_signal_out 1 1 3 480 820 NJ 820 1310
-preplace netloc signal_composer_0_signal_valid 1 3 1 NJ 480
-preplace netloc signal_ramp_0_ramp_state 1 2 2 NJ 930 NJ
-preplace netloc signal_ramp_0_signal_out 1 2 1 960 280n
-preplace netloc start_ramp_down_1 1 0 2 NJ 990 NJ
-preplace netloc waveform_awg1_S 1 2 1 990 460n
-preplace netloc xlconstant_0_dout 1 2 1 900J 530n
-preplace netloc awg_bram_1 1 0 2 NJ 1090 NJ
-levelinfo -pg 1 -10 190 700 1150 1330
-pagesize -pg 1 -db -bbox -sgen -170 0 1550 1240
+preplace port awg_bram -pg 1 -lvl 0 -x -10 -y 1050 -defaultsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -10 -y 990 -defaultsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x -10 -y 1130 -defaultsOSRD
+preplace port port-id_bram_aresetn -pg 1 -lvl 0 -x -10 -y 1110 -defaultsOSRD
+preplace port port-id_disable_dac -pg 1 -lvl 0 -x -10 -y 790 -defaultsOSRD
+preplace port port-id_enable_ramping -pg 1 -lvl 0 -x -10 -y 890 -defaultsOSRD
+preplace port port-id_resync_dac -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
+preplace port port-id_start_ramp_down -pg 1 -lvl 0 -x -10 -y 950 -defaultsOSRD
+preplace portBus Din -pg 1 -lvl 0 -x -10 -y 520 -defaultsOSRD
+preplace portBus S -pg 1 -lvl 5 -x 1740 -y 360 -defaultsOSRD
+preplace portBus m_axis_data_tvalid_1 -pg 1 -lvl 5 -x 1740 -y 600 -defaultsOSRD
+preplace portBus offset -pg 1 -lvl 0 -x -10 -y 970 -defaultsOSRD
+preplace portBus ramp_state_1 -pg 1 -lvl 5 -x 1740 -y 890 -defaultsOSRD
+preplace inst signal_calib_0 -pg 1 -lvl 4 -x 1530 -y 360 -defaultsOSRD
+preplace inst signal_cfg_slice_0 -pg 1 -lvl 1 -x 200 -y 520 -defaultsOSRD
+preplace inst signal_composer_0 -pg 1 -lvl 4 -x 1530 -y 610 -defaultsOSRD
+preplace inst signal_ramp_0 -pg 1 -lvl 3 -x 1110 -y 900 -defaultsOSRD
+preplace inst waveform_awg1 -pg 1 -lvl 3 -x 1110 -y 1100 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 1110 -y 750 -defaultsOSRD
+preplace inst waveform_gen_0 -pg 1 -lvl 4 -x 1530 -y 130 -defaultsOSRD
+preplace inst waveform_gen_1 -pg 1 -lvl 2 -x 670 -y 530 -defaultsOSRD
+preplace inst waveform_gen_2 -pg 1 -lvl 3 -x 1110 -y 550 -defaultsOSRD
+preplace netloc Din_1 1 0 1 NJ 520
+preplace netloc bram_aresetn_1 1 0 3 NJ 1110 NJ 1110 N
+preplace netloc clk_wiz_0_clk_internal 1 0 4 20J 250 440 350 890 350 1340
+preplace netloc disable_dac_1 1 0 4 NJ 790 NJ 790 910 670 1300J
+preplace netloc enable_ramping_1 1 0 3 NJ 890 NJ 890 N
+preplace netloc offset_1 1 0 4 30J 860 NJ 860 920 680 1290J
+preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 0 4 10J 240 450 240 900 110 N
+preplace netloc signal_calib_0_signal_out 1 4 1 NJ 360
+preplace netloc signal_cfg_slice_0_calib_limit_lower 1 1 3 410 360 N 360 NJ
+preplace netloc signal_cfg_slice_0_calib_limit_upper 1 1 3 430 380 N 380 NJ
+preplace netloc signal_cfg_slice_0_calib_offset 1 1 3 370 320 N 320 1330J
+preplace netloc signal_cfg_slice_0_calib_scale 1 1 1 N 350
+preplace netloc signal_cfg_slice_0_comp_3_freq 1 1 2 460 870 850
+preplace netloc signal_cfg_slice_0_comp_3_phase 1 1 2 380 880 840
+preplace netloc signal_cfg_slice_0_offset 1 1 3 N 330 N 330 1310J
+preplace netloc signal_cfg_slice_0_ramp_freq 1 1 2 N 310 880
+preplace netloc signal_composer_0_signal_out 1 2 3 930 690 1280J 780 1700
+preplace netloc signal_composer_0_signal_valid 1 4 1 NJ 600
+preplace netloc signal_ramp_0_ramp_state 1 3 2 NJ 890 NJ
+preplace netloc signal_ramp_0_signal_out 1 3 1 1320 400n
+preplace netloc start_ramp_down_1 1 0 3 NJ 950 NJ 950 N
+preplace netloc xlconstant_0_dout 1 3 1 1330J 660n
+preplace netloc phase_2 1 1 1 N 570
+preplace netloc phase_3 1 1 2 490 400 870
+preplace netloc amplitude_2 1 1 1 430 490n
+preplace netloc freq_3 1 1 2 500 410 860
+preplace netloc freq_2 1 1 1 N 550
+preplace netloc phase_1 1 1 3 400 170 N 170 N
+preplace netloc freq_1 1 1 3 420 300 N 300 1310
+preplace netloc amplitude_3 1 1 2 470 390 910
+preplace netloc amplitude_1 1 1 3 380 290 N 290 1290
+preplace netloc resync_dac_1 1 0 4 NJ 230 460 230 930 190 N
+preplace netloc cfg_data_1 1 1 3 390 130 N 130 N
+preplace netloc waveform_gen_0_m_axis_data_tvalid_1 1 3 2 1350 10 1700
+preplace netloc waveform_gen_0_wave 1 3 2 1360 250 1700
+preplace netloc cfg_data_2 1 1 1 450 530n
+preplace netloc waveform_gen_1_m_axis_data_tvalid_1 1 2 2 850 430 1290J
+preplace netloc waveform_gen_1_wave 1 2 2 840J 420 1330
+preplace netloc cfg_data_3 1 1 2 480J 370 920
+preplace netloc waveform_awg1_S 1 3 1 1340 580n
+preplace netloc waveform_gen_2_m_axis_data_tvalid_1 1 3 1 1280 540n
+preplace netloc waveform_gen_2_wave 1 3 1 N 560
+preplace netloc awg_bram_1 1 0 3 NJ 1050 NJ 1050 N
+levelinfo -pg 1 -10 200 670 1110 1530 1740
+pagesize -pg 1 -db -bbox -sgen -170 0 1960 1200
 "
 }
 0

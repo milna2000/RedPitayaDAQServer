@@ -188,7 +188,7 @@
             "value": "125"
           },
           "DSP48_Use": {
-            "value": "Maximal"
+            "value": "Minimal"
           },
           "Frequency_Resolution": {
             "value": "4.440893e-7"
