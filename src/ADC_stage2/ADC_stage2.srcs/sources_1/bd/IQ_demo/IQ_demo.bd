@@ -1,0 +1,865 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x61DB1E7B14244836",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../ADC_stage2.gen/sources_1/bd/IQ_demo",
+      "name": "IQ_demo",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "dds_compiler_0": "",
+      "cic_compiler_0": "",
+      "fir_compiler_0": "",
+      "cic_compiler_1": "",
+      "cordic_0": "",
+      "iq_mixer_axis_0": "",
+      "dds_compiler_1": "",
+      "cic_compiler_2": "",
+      "axis_combiner_0": ""
+    },
+    "interface_ports": {
+      "M_AXIS_DOUT_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "IQ_demo_aclk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "0",
+            "value_src": "auto_prop"
+          },
+          "HAS_TREADY": {
+            "value": "0",
+            "value_src": "auto_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_real {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value real} enabled {attribs {resolve_type generated dependency polar_mag_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_mag_width format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_mag_fractwidth format long minimum {} maximum {}} value 22} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} field_phase {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_phase_width format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type generated dependency polar_phase_offset format long minimum {} maximum {}} value 24} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_phase_fractwidth format long minimum {} maximum {}} value 21} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}} TDATA_WIDTH 48 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cartesian_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cartesian_tuser} enabled {attribs {resolve_type generated dependency cart_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cart_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_phase_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_tuser} enabled {attribs {resolve_type generated dependency phase_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency phase_offset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 0}",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "6",
+            "value_src": "auto_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "auto_prop"
+          }
+        }
+      }
+    },
+    "ports": {
+      "aclk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "M_AXIS_DOUT_0",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "aresetn_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "IQ_demo_aclk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "aresetn_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "dds_compiler_0": {
+        "vlnv": "xilinx.com:ip:dds_compiler:6.0",
+        "xci_name": "IQ_demo_dds_compiler_0_0",
+        "xci_path": "ip\\IQ_demo_dds_compiler_0_0\\IQ_demo_dds_compiler_0_0.xci",
+        "inst_hier_path": "dds_compiler_0",
+        "parameters": {
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "DDS_Clock_Rate": {
+            "value": "125"
+          },
+          "Frequency_Resolution": {
+            "value": "0.4"
+          },
+          "Has_ARESETn": {
+            "value": "true"
+          },
+          "Has_Phase_Out": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "9"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Noise_Shaping": {
+            "value": "Auto"
+          },
+          "Output_Frequency1": {
+            "value": "0.1"
+          },
+          "Output_Selection": {
+            "value": "Sine"
+          },
+          "Output_Width": {
+            "value": "14"
+          },
+          "PINC1": {
+            "value": "1101000110110111000"
+          },
+          "POFF1": {
+            "value": "1000000000000000000000000000"
+          },
+          "Phase_Offset_Angles1": {
+            "value": "0.25"
+          },
+          "Phase_Width": {
+            "value": "29"
+          },
+          "Phase_offset": {
+            "value": "Fixed"
+          },
+          "S_PHASE_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Spurious_Free_Dynamic_Range": {
+            "value": "84"
+          }
+        }
+      },
+      "cic_compiler_0": {
+        "vlnv": "xilinx.com:ip:cic_compiler:4.0",
+        "xci_name": "IQ_demo_cic_compiler_0_0",
+        "xci_path": "ip\\IQ_demo_cic_compiler_0_0\\IQ_demo_cic_compiler_0_0.xci",
+        "inst_hier_path": "cic_compiler_0",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "125"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Fixed_Or_Initial_Rate": {
+            "value": "8"
+          },
+          "HAS_ARESETN": {
+            "value": "true"
+          },
+          "Input_Data_Width": {
+            "value": "14"
+          },
+          "Input_Sample_Frequency": {
+            "value": "125"
+          },
+          "Maximum_Rate": {
+            "value": "8"
+          },
+          "Minimum_Rate": {
+            "value": "8"
+          },
+          "Number_Of_Stages": {
+            "value": "6"
+          },
+          "Output_Data_Width": {
+            "value": "16"
+          },
+          "Quantization": {
+            "value": "Truncation"
+          },
+          "SamplePeriod": {
+            "value": "1"
+          }
+        }
+      },
+      "fir_compiler_0": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "xci_name": "IQ_demo_fir_compiler_0_0",
+        "xci_path": "ip\\IQ_demo_fir_compiler_0_0\\IQ_demo_fir_compiler_0_0.xci",
+        "inst_hier_path": "fir_compiler_0",
+        "parameters": {
+          "BestPrecision": {
+            "value": "true"
+          },
+          "Clock_Frequency": {
+            "value": "125"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../rx_fir.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "24"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Inferred"
+          },
+          "Coefficient_Width": {
+            "value": "24"
+          },
+          "ColumnConfig": {
+            "value": "3"
+          },
+          "Decimation_Rate": {
+            "value": "2"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Has_ARESETn": {
+            "value": "true"
+          },
+          "Interpolation_Rate": {
+            "value": "1"
+          },
+          "Number_Channels": {
+            "value": "1"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Convergent_Rounding_to_Even"
+          },
+          "Output_Width": {
+            "value": "18"
+          },
+          "Quantization": {
+            "value": "Quantize_Only"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "Sample_Frequency": {
+            "value": "15.625"
+          },
+          "Zero_Pack_Factor": {
+            "value": "1"
+          }
+        }
+      },
+      "cic_compiler_1": {
+        "vlnv": "xilinx.com:ip:cic_compiler:4.0",
+        "xci_name": "IQ_demo_cic_compiler_1_0",
+        "xci_path": "ip\\IQ_demo_cic_compiler_1_0\\IQ_demo_cic_compiler_1_0.xci",
+        "inst_hier_path": "cic_compiler_1",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "125"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Fixed_Or_Initial_Rate": {
+            "value": "625"
+          },
+          "HAS_ARESETN": {
+            "value": "true"
+          },
+          "Input_Data_Width": {
+            "value": "17"
+          },
+          "Input_Sample_Frequency": {
+            "value": "7.8125"
+          },
+          "Maximum_Rate": {
+            "value": "625"
+          },
+          "Minimum_Rate": {
+            "value": "625"
+          },
+          "Output_Data_Width": {
+            "value": "24"
+          },
+          "Quantization": {
+            "value": "Truncation"
+          },
+          "SamplePeriod": {
+            "value": "1"
+          }
+        }
+      },
+      "cordic_0": {
+        "vlnv": "xilinx.com:ip:cordic:6.0",
+        "xci_name": "IQ_demo_cordic_0_0",
+        "xci_path": "ip\\IQ_demo_cordic_0_0\\IQ_demo_cordic_0_0.xci",
+        "inst_hier_path": "cordic_0",
+        "parameters": {
+          "ARESETN": {
+            "value": "true"
+          },
+          "Compensation_Scaling": {
+            "value": "Embedded_Multiplier"
+          },
+          "Data_Format": {
+            "value": "SignedFraction"
+          },
+          "Functional_Selection": {
+            "value": "Translate"
+          },
+          "Input_Width": {
+            "value": "24"
+          },
+          "Output_Width": {
+            "value": "24"
+          },
+          "Phase_Format": {
+            "value": "Scaled_Radians"
+          }
+        }
+      },
+      "iq_mixer_axis_0": {
+        "vlnv": "xilinx.com:module_ref:iq_mixer_axis:1.0",
+        "xci_name": "IQ_demo_iq_mixer_axis_0_0",
+        "xci_path": "ip\\IQ_demo_iq_mixer_axis_0_0\\IQ_demo_iq_mixer_axis_0_0.xci",
+        "inst_hier_path": "iq_mixer_axis_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "iq_mixer_axis",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "S_AXIS_DATA": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "3",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "IQ_demo_aclk_0",
+                "value_src": "default_prop"
+              },
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 18} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chan} size {attribs {resolve_type generated dependency chan_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency chan_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 18} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value path} size {attribs {resolve_type generated dependency path_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency path_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency out_width format long minimum {} maximum {}} value 18} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency out_fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type generated dependency out_signed format bool minimum {} maximum {}} value true}}}}}}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_data_valid {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data_valid} enabled {attribs {resolve_type generated dependency data_valid_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency data_valid_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_chanid {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chanid} enabled {attribs {resolve_type generated dependency chanid_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency chanid_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency chanid_bitoffset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_user {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value user} enabled {attribs {resolve_type generated dependency user_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency user_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency user_bitoffset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+                "value_src": "ip_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_data_tdata",
+                "direction": "I",
+                "left": "23",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_data_tvalid",
+                "direction": "I"
+              }
+            }
+          },
+          "S_AXIS_REF": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "4",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "IQ_demo_aclk_0",
+                "value_src": "default_prop"
+              },
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chan} size {attribs {resolve_type generated dependency chan_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency chan_stride format long minimum {} maximum {}} value 32} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cosine {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cosine} enabled {attribs {resolve_type generated dependency cosine_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cosine_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency cosine_fractwidth format long minimum {} maximum {}} value 15} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} field_sine {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value sine} enabled {attribs {resolve_type generated dependency sine_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency sine_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type generated dependency sine_offset format long minimum {} maximum {}} value 16} real {fixed {fractwidth {attribs {resolve_type generated dependency sine_fractwidth format long minimum {} maximum {}} value 15} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_chanid {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chanid} enabled {attribs {resolve_type generated dependency chanid_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency chanid_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_user {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value user} enabled {attribs {resolve_type generated dependency user_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency user_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency user_offset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+                "value_src": "ip_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_ref_tdata",
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_ref_tvalid",
+                "direction": "I"
+              }
+            }
+          },
+          "M_AXIS_I": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "3",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "IQ_demo_aclk_0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_i_tdata",
+                "direction": "O",
+                "left": "23",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_i_tvalid",
+                "direction": "O"
+              }
+            }
+          },
+          "M_AXIS_Q": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "3",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "IQ_demo_aclk_0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_q_tdata",
+                "direction": "O",
+                "left": "23",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_q_tvalid",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "S_AXIS_DATA:S_AXIS_REF:M_AXIS_I:M_AXIS_Q",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "IQ_demo_aclk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "dds_compiler_1": {
+        "vlnv": "xilinx.com:ip:dds_compiler:6.0",
+        "xci_name": "IQ_demo_dds_compiler_1_0",
+        "xci_path": "ip\\IQ_demo_dds_compiler_1_0\\IQ_demo_dds_compiler_1_0.xci",
+        "inst_hier_path": "dds_compiler_1",
+        "parameters": {
+          "DDS_Clock_Rate": {
+            "value": "125"
+          },
+          "Frequency_Resolution": {
+            "value": "0.4"
+          },
+          "Has_ARESETn": {
+            "value": "true"
+          },
+          "Has_Phase_Out": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "8"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Noise_Shaping": {
+            "value": "Auto"
+          },
+          "Output_Frequency1": {
+            "value": "0.1"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "PINC1": {
+            "value": "1101000110110111000"
+          },
+          "Phase_Width": {
+            "value": "29"
+          },
+          "Spurious_Free_Dynamic_Range": {
+            "value": "96"
+          }
+        }
+      },
+      "cic_compiler_2": {
+        "vlnv": "xilinx.com:ip:cic_compiler:4.0",
+        "xci_name": "IQ_demo_cic_compiler_1_1",
+        "xci_path": "ip\\IQ_demo_cic_compiler_1_1\\IQ_demo_cic_compiler_1_1.xci",
+        "inst_hier_path": "cic_compiler_2",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "125"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Fixed_Or_Initial_Rate": {
+            "value": "625"
+          },
+          "HAS_ARESETN": {
+            "value": "true"
+          },
+          "Input_Data_Width": {
+            "value": "17"
+          },
+          "Input_Sample_Frequency": {
+            "value": "7.8125"
+          },
+          "Maximum_Rate": {
+            "value": "625"
+          },
+          "Minimum_Rate": {
+            "value": "625"
+          },
+          "Output_Data_Width": {
+            "value": "24"
+          },
+          "Quantization": {
+            "value": "Truncation"
+          },
+          "SamplePeriod": {
+            "value": "1"
+          }
+        }
+      },
+      "axis_combiner_0": {
+        "vlnv": "xilinx.com:ip:axis_combiner:1.1",
+        "xci_name": "IQ_demo_axis_combiner_0_0",
+        "xci_path": "ip\\IQ_demo_axis_combiner_0_0\\IQ_demo_axis_combiner_0_0.xci",
+        "inst_hier_path": "axis_combiner_0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "3"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "axis_combiner_0_M_AXIS": {
+        "interface_ports": [
+          "axis_combiner_0/M_AXIS",
+          "cordic_0/S_AXIS_CARTESIAN"
+        ]
+      },
+      "cic_compiler_0_M_AXIS_DATA": {
+        "interface_ports": [
+          "cic_compiler_0/M_AXIS_DATA",
+          "fir_compiler_0/S_AXIS_DATA"
+        ]
+      },
+      "cic_compiler_1_M_AXIS_DATA": {
+        "interface_ports": [
+          "cic_compiler_1/M_AXIS_DATA",
+          "axis_combiner_0/S00_AXIS"
+        ]
+      },
+      "cic_compiler_2_M_AXIS_DATA": {
+        "interface_ports": [
+          "cic_compiler_2/M_AXIS_DATA",
+          "axis_combiner_0/S01_AXIS"
+        ]
+      },
+      "cordic_0_M_AXIS_DOUT": {
+        "interface_ports": [
+          "M_AXIS_DOUT_0",
+          "cordic_0/M_AXIS_DOUT"
+        ]
+      },
+      "dds_compiler_0_M_AXIS_DATA": {
+        "interface_ports": [
+          "dds_compiler_0/M_AXIS_DATA",
+          "cic_compiler_0/S_AXIS_DATA"
+        ]
+      },
+      "dds_compiler_1_M_AXIS_DATA": {
+        "interface_ports": [
+          "dds_compiler_1/M_AXIS_DATA",
+          "iq_mixer_axis_0/S_AXIS_REF"
+        ]
+      },
+      "fir_compiler_0_M_AXIS_DATA": {
+        "interface_ports": [
+          "iq_mixer_axis_0/S_AXIS_DATA",
+          "fir_compiler_0/M_AXIS_DATA"
+        ]
+      },
+      "iq_mixer_axis_0_M_AXIS_I": {
+        "interface_ports": [
+          "iq_mixer_axis_0/M_AXIS_I",
+          "cic_compiler_1/S_AXIS_DATA"
+        ]
+      },
+      "iq_mixer_axis_0_M_AXIS_Q": {
+        "interface_ports": [
+          "iq_mixer_axis_0/M_AXIS_Q",
+          "cic_compiler_2/S_AXIS_DATA"
+        ]
+      }
+    },
+    "nets": {
+      "aclk_0_1": {
+        "ports": [
+          "aclk_0",
+          "dds_compiler_0/aclk",
+          "cic_compiler_0/aclk",
+          "fir_compiler_0/aclk",
+          "cic_compiler_1/aclk",
+          "cordic_0/aclk",
+          "dds_compiler_1/aclk",
+          "iq_mixer_axis_0/aclk",
+          "cic_compiler_2/aclk",
+          "axis_combiner_0/aclk"
+        ]
+      },
+      "aresetn_0_1": {
+        "ports": [
+          "aresetn_0",
+          "dds_compiler_0/aresetn",
+          "cic_compiler_0/aresetn",
+          "fir_compiler_0/aresetn",
+          "cic_compiler_1/aresetn",
+          "cordic_0/aresetn",
+          "iq_mixer_axis_0/aresetn",
+          "dds_compiler_1/aresetn",
+          "cic_compiler_2/aresetn",
+          "axis_combiner_0/aresetn"
+        ]
+      }
+    }
+  }
+}

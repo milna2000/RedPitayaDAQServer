@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/ipshared/8713/hdl" \
+"../../../../ADC_stage2.srcs/sources_1/imports/new/iq_mixer.v" \
+"../../../../ADC_stage2.srcs/sources_1/new/iq_mixer_axis.v" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_iq_mixer_axis_0_0/sim/IQ_demo_iq_mixer_axis_0_0.v" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_axis_combiner_0_0/sim/IQ_demo_axis_combiner_0_0.v" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/sim/IQ_demo.v" \
+"../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/hdl/IQ_demo_wrapper.v" \
+"../../../../ADC_stage2.srcs/sim_1/new/tb_iq_demod.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

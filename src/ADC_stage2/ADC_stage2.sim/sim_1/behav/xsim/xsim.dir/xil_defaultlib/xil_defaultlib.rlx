@@ -1,0 +1,19 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Vivado/ADC_stage2/ADC_stage2.gen/sources_1/bd/IQ_demo/hdl/IQ_demo_wrapper.v,1791796972,verilog,,C:/Vivado/ADC_stage2/ADC_stage2.srcs/sim_1/new/tb_iq_demod.v,,IQ_demo_wrapper,,,../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/ipshared/8713/hdl,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_axis_combiner_0_0/sim/IQ_demo_axis_combiner_0_0.v,1791796974,verilog,,C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/sim/IQ_demo.v,,IQ_demo_axis_combiner_0_0,,,../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/ipshared/8713/hdl,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_cic_compiler_0_0/sim/IQ_demo_cic_compiler_0_0.vhd,1791796973,vhdl,,,,iq_demo_cic_compiler_0_0,,,,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_cic_compiler_1_0/sim/IQ_demo_cic_compiler_1_0.vhd,1791796973,vhdl,,,,iq_demo_cic_compiler_1_0,,,,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_cic_compiler_1_1/sim/IQ_demo_cic_compiler_1_1.vhd,1791796974,vhdl,,,,iq_demo_cic_compiler_1_1,,,,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_cordic_0_0/sim/IQ_demo_cordic_0_0.vhd,1791796973,vhdl,,,,iq_demo_cordic_0_0,,,,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_dds_compiler_0_0/sim/IQ_demo_dds_compiler_0_0.vhd,1791808571,vhdl,,,,iq_demo_dds_compiler_0_0,,,,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_dds_compiler_1_0/sim/IQ_demo_dds_compiler_1_0.vhd,1791796974,vhdl,,,,iq_demo_dds_compiler_1_0,,,,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_fir_compiler_0_0/sim/IQ_demo_fir_compiler_0_0.vhd,1791796973,vhdl,,,,iq_demo_fir_compiler_0_0,,,,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_iq_mixer_axis_0_0/sim/IQ_demo_iq_mixer_axis_0_0.v,1791796974,verilog,,C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_axis_combiner_0_0/sim/IQ_demo_axis_combiner_0_0.v,,IQ_demo_iq_mixer_axis_0_0,,,../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/ipshared/8713/hdl,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/sim/IQ_demo.v,1791808571,verilog,,C:/Vivado/ADC_stage2/ADC_stage2.gen/sources_1/bd/IQ_demo/hdl/IQ_demo_wrapper.v,,IQ_demo,,,../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/ipshared/8713/hdl,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.srcs/sim_1/new/tb_iq_demod.v,1791796953,verilog,,,,tb_iq_demod,,,../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/ipshared/8713/hdl,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.srcs/sources_1/imports/new/iq_mixer.v,1791543845,verilog,,C:/Vivado/ADC_stage2/ADC_stage2.srcs/sources_1/new/iq_mixer_axis.v,,iq_mixer,,,../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/ipshared/8713/hdl,,,,,
+C:/Vivado/ADC_stage2/ADC_stage2.srcs/sources_1/new/iq_mixer_axis.v,1791544842,verilog,,C:/Vivado/ADC_stage2/ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_iq_mixer_axis_0_0/sim/IQ_demo_iq_mixer_axis_0_0.v,,iq_mixer_axis,,,../../../../ADC_stage2.gen/sources_1/bd/IQ_demo/ipshared/8713/hdl,,,,,

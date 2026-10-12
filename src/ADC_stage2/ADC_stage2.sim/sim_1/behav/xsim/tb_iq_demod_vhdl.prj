@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_dds_compiler_0_0/sim/IQ_demo_dds_compiler_0_0.vhd" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_cic_compiler_0_0/sim/IQ_demo_cic_compiler_0_0.vhd" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_fir_compiler_0_0/sim/IQ_demo_fir_compiler_0_0.vhd" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_cic_compiler_1_0/sim/IQ_demo_cic_compiler_1_0.vhd" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_cordic_0_0/sim/IQ_demo_cordic_0_0.vhd" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_dds_compiler_1_0/sim/IQ_demo_dds_compiler_1_0.vhd" \
+"../../../../ADC_stage2.ip_user_files/bd/IQ_demo/ip/IQ_demo_cic_compiler_1_1/sim/IQ_demo_cic_compiler_1_1.vhd" \
+
+# Do not sort compile order
+nosort
